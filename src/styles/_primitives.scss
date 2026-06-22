@@ -7,109 +7,124 @@
   // --------------------------------------------------------------------
   // Brand — Main
   // --------------------------------------------------------------------
-  --primitive-lime-50: #F4FFD9;
-  --primitive-lime-100: #E9FFAD;
-  --primitive-lime-200: #D9FF73;
-  --primitive-lime-300: #C8FF3D;
-  --primitive-lime-400: #B0E62A;
-  --primitive-lime-500: #8FC41A;
-  --primitive-lime-600: #6B9510;
+  --lime-50: #f4ffd9;
+  --lime-100: #e9ffad;
+  --lime-200: #d9ff73;
+  --lime-300: #c8ff3d;
+  --lime-400: #b0e62a;
+  --lime-500: #8fc41a;
+  --lime-600: #6b9510;
 
   // --------------------------------------------------------------------
   // Category — Exhibition (전시)
   // --------------------------------------------------------------------
-  --primitive-purple-50: #EFEAFB;
-  --primitive-purple-100: #D6C9F5;
-  --primitive-purple-200: #AC97EA;
-  --primitive-purple-300: #7C5CE0;
-  --primitive-purple-400: #5F3FC4;
-  --primitive-purple-500: #472E96;
-  --primitive-purple-600: #321F6B;
+  --purple-50: #efeafb;
+  --purple-100: #d6c9f5;
+  --purple-200: #ac97ea;
+  --purple-300: #7c5ce0;
+  --purple-400: #5f3fc4;
+  --purple-500: #472e96;
+  --purple-600: #321f6b;
 
   // --------------------------------------------------------------------
   // Category — Performance (공연)
   // --------------------------------------------------------------------
-  --primitive-pink-50: #FDEAF2;
-  --primitive-pink-100: #FAC2DC;
-  --primitive-pink-200: #F58CB8;
-  --primitive-pink-300: #F5599C;
-  --primitive-pink-400: #D63680;
-  --primitive-pink-500: #A12760;
-  --primitive-pink-600: #701B43;
+  --pink-50: #fdeaf2;
+  --pink-100: #fac2dc;
+  --pink-200: #f58cb8;
+  --pink-300: #f5599c;
+  --pink-400: #d63680;
+  --pink-500: #a12760;
+  --pink-600: #701b43;
 
   // --------------------------------------------------------------------
   // Category — Pop-up (팝업)
   // --------------------------------------------------------------------
-  --primitive-orange-50: #FFF0E6;
-  --primitive-orange-100: #FFD3B3;
-  --primitive-orange-200: #FFAB72;
-  --primitive-orange-300: #FF8A4D;
-  --primitive-orange-400: #E6661F;
-  --primitive-orange-500: #B04E16;
-  --primitive-orange-600: #7A360F;
+  --orange-50: #fff0e6;
+  --orange-100: #ffd3b3;
+  --orange-200: #ffab72;
+  --orange-300: #ff8a4d;
+  --orange-400: #e6661f;
+  --orange-500: #b04e16;
+  --orange-600: #7a360f;
 
   // --------------------------------------------------------------------
   // Category — Film (영화)
   // --------------------------------------------------------------------
-  --primitive-blue-50: #EAEFFE;
-  --primitive-blue-100: #C3D0FC;
-  --primitive-blue-200: #93A8F8;
-  --primitive-blue-300: #5C7CF0;
-  --primitive-blue-400: #3955D4;
-  --primitive-blue-500: #2A3FA0;
-  --primitive-blue-600: #1D2C70;
+  --blue-50: #eaeffe;
+  --blue-100: #c3d0fc;
+  --blue-200: #93a8f8;
+  --blue-300: #5c7cf0;
+  --blue-400: #3955d4;
+  --blue-500: #2a3fa0;
+  --blue-600: #1d2c70;
 
   // --------------------------------------------------------------------
   // Gray scale (dark theme base)
   // --------------------------------------------------------------------
-  --primitive-gray-1: #1C1C1C;
-  --primitive-gray-2: #2D2D2D;
-  --primitive-gray-3: #404040;
-  --primitive-gray-4: #555555;
-  --primitive-gray-5: #7F7F7F;
-  --primitive-gray-6: #A8A8A8;
-  --primitive-gray-7: #D2D2D2;
-  --primitive-gray-8: #E2E2E2;
-  --primitive-gray-9: #F1F1F1;
+  --gray-1: #1c1c1c;
+  --gray-2: #2d2d2d;
+  --gray-3: #404040;
+  --gray-4: #555555;
+  --gray-5: #7f7f7f;
+  --gray-6: #a8a8a8;
+  --gray-7: #d2d2d2;
+  --gray-8: #e2e2e2;
+  --gray-9: #f1f1f1;
 
   // --------------------------------------------------------------------
   // Base
   // --------------------------------------------------------------------
-  --primitive-black: #000000;
-  --primitive-white: #FFFFFF;
+  --black: #000000;
+  --white: #ffffff;
 
   // --------------------------------------------------------------------
-  // Semantic status (alert / success / warning — UI 상태용, 카테고리와 분리)
+  // Status (alert / success / warning — UI 상태용, 카테고리와 분리)
   // --------------------------------------------------------------------
-  --primitive-green-300: #4ADE80;  // 진행중 등 긍정 상태
-  --primitive-red-300: #FF5C5C;    // 종료/에러 등 부정 상태
-  --primitive-amber-300: #FFC53D;  // 예정/대기 등 경고 상태
+  --green-300: #4ade80; // 진행중 등 긍정 상태
+  --red-300: #ff5c5c; // 종료/에러 등 부정 상태
+  --amber-300: #ffc53d; // 예정/대기 등 경고 상태
 
   // --------------------------------------------------------------------
   // Typography
   // --------------------------------------------------------------------
-  --primitive-font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --primitive-font-logo: 'Space Grotesk', 'Pretendard', sans-serif;
+  --font-sans:
+    'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-logo: 'Space Grotesk', 'Pretendard', sans-serif;
+
+  // Typography — Font Size (raw px values)
+  --font-size-11: 11px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-18: 18px;
+  --font-size-22: 22px;
+  --font-size-26: 26px;
+  --font-size-34: 34px;
 
   // --------------------------------------------------------------------
   // Radius
   // --------------------------------------------------------------------
-  --primitive-radius-sm: 6px;
-  --primitive-radius-md: 10px;
-  --primitive-radius-lg: 14px;
-  --primitive-radius-xl: 20px;
-  --primitive-radius-full: 999px;
+  --radius-6: 6px;
+  --radius-10: 10px;
+  --radius-14: 14px;
+  --radius-20: 20px;
+  --radius-999: 999px;
 
   // --------------------------------------------------------------------
   // Spacing (4px base scale)
   // --------------------------------------------------------------------
-  --primitive-space-1: 4px;
-  --primitive-space-2: 8px;
-  --primitive-space-3: 12px;
-  --primitive-space-4: 16px;
-  --primitive-space-5: 20px;
-  --primitive-space-6: 24px;
-  --primitive-space-8: 32px;
-  --primitive-space-10: 40px;
-  --primitive-space-12: 48px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-60: 60px;
+  --space-80: 80px;
+  --space-100: 100px;
+  --space-120: 120px;
 }

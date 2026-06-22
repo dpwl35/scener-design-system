@@ -9,7 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg-base);
+  background-color: var(--color-background-base);
   color: var(--color-text-primary);
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
@@ -17,4 +17,11 @@ body {
 
 button {
   font-family: inherit;
+}
+
+.scener-docs-page {
+  h2 {
+    margin-top: 48px !important;
+    padding-top: 20px !important;
+  }
 }
