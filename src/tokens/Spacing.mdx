@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { SpacingSample } from './Spacing';
+
+<Meta title='TOKENS/Spacing' />
+
+<div  className="scener-docs-page"  style={{ fontFamily: 'Pretendard, sans-serif' }}>
+
+# Spacing
+
+SCENE;er의 spacing은 **4px ~ 120px, 13단계 스케일**을 따릅니다. 작은 값은 4px 단위로 촘촘하게, 큰 값은 점점 넓은 간격으로 늘어납니다. 컴포넌트 내부 패딩, 요소 간 간격, 레이아웃 마진 등 모든 간격 값에 이 토큰을 사용합니다.
+
+<div>
+  <SpacingSample variable='--spacing-6xsmall' pxValue='4px' />
+  <SpacingSample variable='--spacing-5xsmall' pxValue='8px' />
+  <SpacingSample variable='--spacing-4xsmall' pxValue='12px' />
+  <SpacingSample variable='--spacing-3xsmall' pxValue='16px' />
+  <SpacingSample variable='--spacing-2xsmall' pxValue='20px' />
+  <SpacingSample variable='--spacing-xsmall' pxValue='24px' />
+  <SpacingSample variable='--spacing-small' pxValue='32px' />
+  <SpacingSample variable='--spacing-medium' pxValue='40px' />
+  <SpacingSample variable='--spacing-large' pxValue='48px' />
+  <SpacingSample variable='--spacing-xlarge' pxValue='60px' />
+  <SpacingSample variable='--spacing-2xlarge' pxValue='80px' />
+  <SpacingSample variable='--spacing-3xlarge' pxValue='100px' />
+  <SpacingSample variable='--spacing-4xlarge' pxValue='120px' />
+</div>
+
+## 사용 규칙
+
+1. 컴포넌트 SCSS에서는 primitive(`--space-*`)를 직접 쓰지 않고, 항상 `var(--spacing-*)` semantic 토큰을 사용합니다.
+2. 이 스케일 밖의 임의 px값은 사용하지 않습니다. 디자인 일관성을 위해 항상 이 13단계 안에서 선택합니다.
+3. 컴포넌트 내부 패딩은 보통 `--spacing-5xsmall`~`--spacing-3xsmall`, 카드 사이 간격은 `--spacing-xsmall`~`--spacing-small`, 섹션 간 레이아웃 간격은 `--spacing-large` 이상을 사용합니다.
+
+</div>
