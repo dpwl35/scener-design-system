@@ -1,0 +1,110 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='GUIDE/Publishing Guide' />
+
+<div className="scener-docs-page" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+
+# Publishing Guide
+
+SCENE;er 디자인 시스템의 코드 작성 규칙입니다. 새 컴포넌트를 추가하거나 기존 코드를 수정할 때 이 규칙을 따릅니다.
+
+## 토큰 구조 — Primitive → Semantic
+
+모든 디자인 토큰은 2단계 레이어로 나뉩니다.
+
+- **Primitive** (`src/styles/_primitives.scss`): 실제 값(px, hex 등)을 담는 원시 레이어. 의미를 갖지 않으며, **컴포넌트에서 직접 참조하지 않습니다.**
+- **Semantic** (`src/styles/_semantic.scss`): primitive를 용도에 맞게 재매핑한 레이어. **컴포넌트는 항상 이 레이어만 참조**합니다.
+
+```scss
+// 컴포넌트에서 primitive를 직접 쓰지 않습니다 (지양)
+.card {
+  background: var(--gray-2);
+}
+
+// 항상 semantic 토큰을 거쳐서 씁니다 (권장)
+.card {
+  background: var(--color-background-elevated);
+}
+```
+
+## 파일 이름 네이밍 규칙
+
+### Primitive 레이어
+
+primitive는 의미를 담지 않고, 실제 값을 그대로 이름에 반영합니다.
+
+| 종류        | 규칙                         | 예시                               |
+| ----------- | ---------------------------- | ---------------------------------- |
+| 컬러        | 색상명 뒤에 50~600 단계 숫자 | --lime-300, --gray-1, --purple-600 |
+| 폰트 사이즈 | font-size 뒤에 px값          | --font-size-15, --font-size-34     |
+| Radius      | radius 뒤에 px값             | --radius-6, --radius-10            |
+| Spacing     | space 뒤에 px값              | --space-4, --space-16, --space-120 |
+
+primitive는 primitive- 접두사를 붙이지 않습니다. 이름 자체가 이미 raw 값을 그대로 드러내기 때문에 접두사가 없어도 primitive임을 알 수 있습니다.
+
+### Semantic 레이어
+
+semantic은 분류, 속성, 변형 순서로 조합합니다. 전체 구조는 다음과 같습니다.
+
+```
+--분류-속성-변형
+```
+
+| 카테고리 | 예시                                                                           |
+| -------- | ------------------------------------------------------------------------------ |
+| 색상     | --color-text-primary, --color-background-elevated, --color-category-exhibition |
+| 타이포   | --text-h1-size, --text-body-1-weight                                           |
+| 라운드   | --radius-sm, --radius-lg                                                       |
+| 간격     | --spacing-small, --spacing-xlarge                                              |
+
+semantic 토큰의 단계 표현은 역할에 따라 다른 명명법을 사용합니다.
+
+- 타이포(Heading, Body): 숫자 — --text-h1, --text-h2, --text-body-1, --text-body-2 (역할 안에서 순서가 명확하므로 숫자가 직관적)
+- Radius, Spacing: 사이즈 명칭 — sm/md/lg/xl, xsmall/small/medium/large (절대적인 크기 단계를 표현하므로 사이즈 이름이 더 직관적)
+
+### 순환 참조 주의
+
+primitive와 semantic의 이름이 같으면 순환 참조가 발생해 값이 무효 처리됩니다. 반드시 서로 다른 이름 체계를 사용합니다.
+
+```scss
+// 순환 참조 — 값이 적용되지 않습니다 (지양)
+--radius-md: 10px;
+--radius-md: var(--radius-md);
+
+// 서로 다른 이름으로 분리 (권장)
+--radius-10: 10px;
+--radius-md: var(--radius-10);
+```
+
+## 컴포넌트 파일 구조
+
+각 컴포넌트는 다음 구조를 따릅니다.
+
+```
+ComponentName/
+├── ComponentName.tsx
+├── ComponentName.scss
+├── ComponentName.stories.tsx
+└── index.ts
+```
+
+`.tsx` 파일에는 인라인 스타일을 직접 작성하지 않고, 항상 별도 `.scss` 파일로 분리합니다. 문서 전용 헬퍼 컴포넌트(Swatch, SpacingSample 등)는 예외이며, 이들은 `src/docs/`에 위치합니다.
+
+## SCSS 클래스명
+
+요소의 역할에 따라 이름을 계층적으로 이어 붙입니다.
+
+```
+.main
+.main-wrap
+.main-item
+.main-item-title
+```
+
+모든 컴포넌트 클래스명은 `scener-` 접두사로 시작합니다.
+
+## 다크 라이트 테마
+
+테마별 값은 `_semantic.scss`에 `[data-theme='light']`, `[data-theme='dark']`로 명시적으로 정의합니다. 브랜드 컬러, 카테고리 컬러, 타이포, spacing처럼 테마와 무관한 토큰은 `:root`에 한 번만 정의합니다.
+
+</div>
