@@ -1,0 +1,79 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import { TypeSample, TypeSampleGroup } from './Typography';
+
+<Meta title='TOKENS/Typography' />
+
+# Typography
+
+SCENE;er의 타이포그래피는 **Display / Heading / Body** 3가지 역할로 구성됩니다. Heading은 3단계(H1~H3), Body는 4단계(Body 1~4)로 세분화됩니다.
+
+<TypeSampleGroup>
+  <TypeSample
+    label='Display · 34/700'
+    sampleText='문화를 발견하다'
+    fontSize='var(--text-display-size)'
+    fontWeight='var(--text-display-weight)'
+    lineHeight='var(--text-display-line-height)'
+  />
+  <TypeSample
+    label='H1 · 26/700'
+    sampleText='이번주 전시'
+    fontSize='var(--text-h1-size)'
+    fontWeight='var(--text-h1-weight)'
+    lineHeight='var(--text-h1-line-height)'
+  />
+  <TypeSample
+    label='H2 · 22/700'
+    sampleText='빛: 영원에서 영원으로'
+    fontSize='var(--text-h2-size)'
+    fontWeight='var(--text-h2-weight)'
+    lineHeight='var(--text-h2-line-height)'
+  />
+  <TypeSample
+    label='H3 · 18/700'
+    sampleText='투데이 아티클'
+    fontSize='var(--text-h3-size)'
+    fontWeight='var(--text-h3-weight)'
+    lineHeight='var(--text-h3-line-height)'
+  />
+  <TypeSample
+    label='Body 1 · 15/400'
+    sampleText='전시·공연·팝업·영화를 장르 구분 없이 발견하세요.'
+    fontSize='var(--text-body-1-size)'
+    fontWeight='var(--text-body-1-weight)'
+    lineHeight='var(--text-body-1-line-height)'
+  />
+  <TypeSample
+    label='Body 2 · 14/400'
+    sampleText='대림미술관 · 종로구'
+    fontSize='var(--text-body-2-size)'
+    fontWeight='var(--text-body-2-weight)'
+    lineHeight='var(--text-body-2-line-height)'
+  />
+  <TypeSample
+    label='Body 3 · 13/400'
+    sampleText='2026.06.22 ~ 2026.08.30'
+    fontSize='var(--text-body-3-size)'
+    fontWeight='var(--text-body-3-weight)'
+    lineHeight='var(--text-body-3-line-height)'
+  />
+  <TypeSample
+    label='Body 4 · 11/400'
+    sampleText='THIS WEEK'
+    fontSize='var(--text-body-4-size)'
+    fontWeight='var(--text-body-4-weight)'
+    lineHeight='var(--text-body-4-line-height)'
+    color='var(--color-brand-primary)'
+    textTransform='uppercase'
+    letterSpacing='0.08em'
+    isLast
+  />
+</TypeSampleGroup>
+
+## 사용 규칙
+
+1. Display는 페이지당 1회만 사용합니다 (메인 화면 슬로건 등 특별한 순간).
+2. Heading은 섹션 제목으로 여러 번 사용할 수 있습니다 (H1보다 큰 별도 페이지 타이틀이 필요하면 Display를 사용).
+3. Body 4는 Overline 용도로도 사용됩니다 — 이때는 브랜드 컬러(라임)와 대문자, 자간을 함께 적용합니다.
+4. 컴포넌트 SCSS에서는 `font-size: var(--primitive-font-size-*)`를 직접 쓰지 않고, 항상 `var(--text-*-size)` 형태의 역할 기반 토큰을 사용합니다.
