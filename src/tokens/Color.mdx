@@ -1,0 +1,144 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Swatch, SwatchGrid } from './Color';
+
+<Meta title='TOKENS/Color' />
+
+<div className="scener-docs-page" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+
+# Color
+
+SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조를 따릅니다.
+
+- **Primitive**: 실제 색상값을 담는 가장 낮은 레이어. 의미를 갖지 않습니다. (`src/styles/_primitives.scss`)
+- **Semantic**: 용도에 맞게 의미를 부여한 레이어. **컴포넌트는 항상 이 레이어만 참조**합니다. (`src/styles/_semantic.scss`)
+
+> 컬러를 바꿔야 할 때는 semantic 레이어의 매핑만 수정하면 됩니다. 컴포넌트 코드는 건드릴 필요가 없습니다.
+
+## Brand
+
+메인 브랜드 컬러입니다. 핵심 CTA 버튼, 로고, 강조 텍스트에만 사용합니다.
+
+<SwatchGrid columns={1}>
+  <Swatch
+    name='Brand Primary'
+    variable='--color-brand-primary'
+    textColor='#1A2E00'
+  />
+</SwatchGrid>
+
+## Category — 장르 컬러
+
+전시·공연·팝업·영화는 서비스 전체에서 항상 같은 색으로 표시됩니다. 카테고리 뱃지, 카드 강조선, 필터 칩 등 장르를 나타내는 모든 곳에 이 매핑을 따릅니다.
+
+<SwatchGrid columns={4}>
+  <Swatch name='전시 (Exhibition)' variable='--color-category-exhibition' />
+  <Swatch name='공연 (Performance)' variable='--color-category-performance' />
+  <Swatch name='팝업 (Pop-up)' variable='--color-category-popup' />
+  <Swatch name='영화 (Film)' variable='--color-category-film' />
+</SwatchGrid>
+
+## Status — 진행 상태
+
+전시·행사 상세페이지에서 진행 상태를 나타냅니다. 카테고리 컬러와는 별도의 체계이며, 절대 섞어 쓰지 않습니다.
+
+<SwatchGrid columns={3}>
+  <Swatch
+    name='진행중 (Ongoing)'
+    variable='--color-status-ongoing'
+    textColor='#0A2E12'
+  />
+  <Swatch
+    name='예정 (Upcoming)'
+    variable='--color-status-upcoming'
+    textColor='#3A2900'
+  />
+  <Swatch name='종료 (Ended)' variable='--color-status-ended' />
+</SwatchGrid>
+
+## Grayscale
+
+다크 테마의 베이스가 되는 그레이 스케일입니다. 숫자가 낮을수록 어둡고, 높을수록 밝습니다.
+
+<SwatchGrid columns={9}>
+  <Swatch name='Gray 1' variable='--gray-1' />
+  <Swatch name='Gray 2' variable='--gray-2' />
+  <Swatch name='Gray 3' variable='--gray-3' />
+  <Swatch name='Gray 4' variable='--gray-4' />
+  <Swatch name='Gray 5' variable='--gray-5' />
+  <Swatch name='Gray 6' variable='--gray-6' textColor='#1C1C1C' />
+  <Swatch name='Gray 7' variable='--gray-7' textColor='#1C1C1C' />
+  <Swatch name='Gray 8' variable='--gray-8' textColor='#1C1C1C' />
+  <Swatch name='Gray 9' variable='--gray-9' textColor='#1C1C1C' />
+</SwatchGrid>
+
+## 사용 규칙
+
+1. 컴포넌트 SCSS에서는 primitive 변수를 직접 쓰지 않고, 항상 `var(--color-...)` semantic 변수를 사용합니다.
+2. 카테고리 컬러는 4종 외에 새로운 색을 추가하지 않습니다. 새 장르가 생기면 디자인 시스템 논의를 먼저 거칩니다.
+3. 브랜드 컬러(라임)는 한 화면에 과도하게 반복하지 않습니다. 핵심 CTA 1곳에 집중하는 것을 권장합니다.
+
+## Primitive Scale
+
+각 컬러는 50(가장 밝음)부터 600(가장 어두움)까지 7단계로 구성됩니다. Semantic 토큰은 이 중 한 단계를 가져다 의미를 부여하는 식으로 매핑됩니다.
+
+### Lime
+
+<SwatchGrid columns={7}>
+  <Swatch name='Lime 50' variable='--lime-50' textColor='#1A2E00' />
+  <Swatch name='Lime 100' variable='--lime-100' textColor='#1A2E00' />
+  <Swatch name='Lime 200' variable='--lime-200' textColor='#1A2E00' />
+  <Swatch name='Lime 300' variable='--lime-300' textColor='#1A2E00' />
+  <Swatch name='Lime 400' variable='--lime-400' textColor='#1A2E00' />
+  <Swatch name='Lime 500' variable='--lime-500' />
+  <Swatch name='Lime 600' variable='--lime-600' />
+</SwatchGrid>
+
+### Purple
+
+<SwatchGrid columns={7}>
+  <Swatch name='Purple 50' variable='--purple-50' textColor='#1C1C1C' />
+  <Swatch name='Purple 100' variable='--purple-100' textColor='#1C1C1C' />
+  <Swatch name='Purple 200' variable='--purple-200' />
+  <Swatch name='Purple 300' variable='--purple-300' />
+  <Swatch name='Purple 400' variable='--purple-400' />
+  <Swatch name='Purple 500' variable='--purple-500' />
+  <Swatch name='Purple 600' variable='--purple-600' />
+</SwatchGrid>
+
+### Pink
+
+<SwatchGrid columns={7}>
+  <Swatch name='Pink 50' variable='--pink-50' textColor='#1C1C1C' />
+  <Swatch name='Pink 100' variable='--pink-100' textColor='#1C1C1C' />
+  <Swatch name='Pink 200' variable='--pink-200' />
+  <Swatch name='Pink 300' variable='--pink-300' />
+  <Swatch name='Pink 400' variable='--pink-400' />
+  <Swatch name='Pink 500' variable='--pink-500' />
+  <Swatch name='Pink 600' variable='--pink-600' />
+</SwatchGrid>
+
+### Orange
+
+<SwatchGrid columns={7}>
+  <Swatch name='Orange 50' variable='--orange-50' textColor='#1C1C1C' />
+  <Swatch name='Orange 100' variable='--orange-100' textColor='#1C1C1C' />
+  <Swatch name='Orange 200' variable='--orange-200' textColor='#1C1C1C' />
+  <Swatch name='Orange 300' variable='--orange-300' />
+  <Swatch name='Orange 400' variable='--orange-400' />
+  <Swatch name='Orange 500' variable='--orange-500' />
+  <Swatch name='Orange 600' variable='--orange-600' />
+</SwatchGrid>
+
+### Blue
+
+<SwatchGrid columns={7}>
+  <Swatch name='Blue 50' variable='--blue-50' textColor='#1C1C1C' />
+  <Swatch name='Blue 100' variable='--blue-100' textColor='#1C1C1C' />
+  <Swatch name='Blue 200' variable='--blue-200' textColor='#1C1C1C' />
+  <Swatch name='Blue 300' variable='--blue-300' />
+  <Swatch name='Blue 400' variable='--blue-400' />
+  <Swatch name='Blue 500' variable='--blue-500' />
+  <Swatch name='Blue 600' variable='--blue-600' />
+</SwatchGrid>
+
+</div>
