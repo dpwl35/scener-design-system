@@ -9,16 +9,21 @@ const meta = {
     docs: {
       description: {
         component:
-          'SCENE;er의 기본 버튼 컴포넌트입니다. Primary는 브랜드 라임 컬러를 사용하는 핵심 CTA(저장하기, 가보고싶어요 등)에, Secondary는 보조 액션, Ghost는 텍스트형 액션(더보기 등)에 사용합니다.',
+          'SCENE;er의 기본 버튼 컴포넌트입니다. category(primary/secondary/ghost)는 시각적 무게감을, variant(default/danger)는 의미를 나타내며, 두 축은 서로 독립적으로 조합됩니다.',
       },
     },
   },
   tags: ['autodocs'],
   argTypes: {
-    variant: {
+    category: {
       control: 'select',
       options: ['primary', 'secondary', 'ghost'],
-      description: '버튼의 시각적 스타일',
+      description: '버튼의 시각적 무게감',
+    },
+    variant: {
+      control: 'select',
+      options: ['default', 'danger'],
+      description: '버튼의 의미(기본/위험)',
     },
     size: {
       control: 'select',
@@ -39,8 +44,12 @@ const meta = {
   },
   args: {
     children: '버튼',
-    variant: 'primary',
+    category: 'primary',
+    variant: 'default',
     size: 'md',
+    fullWidth: false,
+    loading: false,
+    disabled: false,
   },
 } satisfies Meta<typeof Button>;
 
@@ -49,35 +58,56 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    variant: 'primary',
+    category: 'primary',
+    variant: 'default',
     children: '저장하기',
   },
+  parameters: {
+    layout: 'padded',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export const Secondary: Story = {
   args: {
-    variant: 'secondary',
+    category: 'secondary',
+    variant: 'default',
     children: '공유하기',
   },
 };
 
 export const Ghost: Story = {
   args: {
-    variant: 'ghost',
+    category: 'ghost',
+    variant: 'default',
     children: '더보기',
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    category: 'primary',
+    variant: 'danger',
+    children: '삭제하기',
   },
 };
 
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      <Button {...args} size="sm">
+      <Button {...args} size='sm'>
         Small
       </Button>
-      <Button {...args} size="md">
+      <Button {...args} size='md'>
         Medium
       </Button>
-      <Button {...args} size="lg">
+      <Button {...args} size='lg'>
         Large
       </Button>
     </div>
@@ -108,23 +138,29 @@ export const Disabled: Story = {
   },
 };
 
-export const AllVariants: Story = {
+export const AllCombinations: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div style={{ display: 'flex', gap: '12px' }}>
-        <Button variant="primary">저장하기</Button>
-        <Button variant="secondary">공유하기</Button>
-        <Button variant="ghost">더보기</Button>
-      </div>
-      <div style={{ display: 'flex', gap: '12px' }}>
-        <Button variant="primary" disabled>
+        <Button category='primary' variant='default'>
           저장하기
         </Button>
-        <Button variant="secondary" disabled>
+        <Button category='secondary' variant='default'>
           공유하기
         </Button>
-        <Button variant="ghost" disabled>
+        <Button category='ghost' variant='default'>
           더보기
+        </Button>
+      </div>
+      <div style={{ display: 'flex', gap: '12px' }}>
+        <Button category='primary' variant='danger'>
+          삭제하기
+        </Button>
+        <Button category='secondary' variant='danger'>
+          탈퇴하기
+        </Button>
+        <Button category='ghost' variant='danger'>
+          계정 삭제
         </Button>
       </div>
     </div>

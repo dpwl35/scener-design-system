@@ -37,7 +37,7 @@ export const TypeSample = ({
   <div
     style={{
       display: 'flex',
-      alignItems: 'baseline',
+      alignItems: 'center',
       gap: '20px',
       padding: '16px 0',
       borderBottom: isLast ? 'none' : '1px solid var(--color-border-default)',
@@ -79,9 +79,7 @@ interface TypeSampleGroupProps {
 export const TypeSampleGroup = ({ children }: TypeSampleGroupProps) => (
   <div
     style={{
-      border: '1px solid var(--color-border-default)',
-      borderRadius: 'var(--radius-lg)',
-      padding: '4px 20px',
+      borderTop: '1px solid var(--color-border-default)',
       margin: '16px 0 32px',
     }}
   >

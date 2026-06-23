@@ -1,5 +1,6 @@
 @import './primitives';
 @import './semantic';
+@import url(./_storybook.scss);
 
 * {
   box-sizing: border-box;
@@ -17,11 +18,4 @@ body {
 
 button {
   font-family: inherit;
-}
-
-.scener-docs-page {
-  h2 {
-    margin-top: 48px !important;
-    padding-top: 20px !important;
-  }
 }

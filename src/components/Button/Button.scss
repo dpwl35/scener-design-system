@@ -1,14 +1,17 @@
 @import '../../styles/mixins';
 
 .scener-button {
-  @include flex-center(var(--space-2));
+  @include flex-center(var(--spacing-5xsmall));
   position: relative;
   border: none;
   border-radius: var(--radius-md);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease,
+    opacity 0.15s ease;
   white-space: nowrap;
   @include focus-ring;
 
@@ -22,9 +25,9 @@
   }
 
   // ------------------------------------------------------------------
-  // Variant
+  // Category × Variant
   // ------------------------------------------------------------------
-  &--primary {
+  &[data-category='primary'][data-variant='default'] {
     background-color: var(--color-brand-primary);
     color: var(--color-brand-on-primary);
 
@@ -37,58 +40,73 @@
     }
   }
 
-  &--secondary {
-    background-color: var(--color-bg-elevated-2);
+  &[data-category='primary'][data-variant='danger'] {
+    background-color: var(--color-danger);
+    color: var(--color-text-inverse);
+  }
+
+  &[data-category='secondary'][data-variant='default'] {
+    background-color: var(--color-background-elevated);
     color: var(--color-text-primary);
     border: 1px solid var(--color-border-default);
 
     &:hover:not(:disabled) {
-      background-color: var(--color-bg-elevated);
       border-color: var(--color-border-strong);
     }
   }
 
-  &--ghost {
+  &[data-category='secondary'][data-variant='danger'] {
+    background-color: var(--color-background-elevated);
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+  }
+
+  &[data-category='ghost'][data-variant='default'] {
     background-color: transparent;
     color: var(--color-text-secondary);
-    padding-left: var(--space-2);
-    padding-right: var(--space-2);
+    padding: var(--spacing-6xsmall);
+    height: auto;
 
     &:hover:not(:disabled) {
       color: var(--color-text-primary);
-      background-color: var(--color-bg-elevated);
+      background-color: var(--color-background-elevated);
     }
+  }
+
+  &[data-category='ghost'][data-variant='danger'] {
+    background-color: transparent;
+    color: var(--color-danger);
   }
 
   // ------------------------------------------------------------------
   // Size
   // ------------------------------------------------------------------
-  &--sm {
+  &[data-size='sm'] {
     height: 32px;
-    padding: 0 var(--space-3);
-    font-size: var(--font-size-sm);
+    padding: 0 var(--spacing-4xsmall);
+    font-size: var(--text-body-3-size);
   }
 
-  &--md {
+  &[data-size='md'] {
     height: 40px;
-    padding: 0 var(--space-4);
-    font-size: var(--font-size-base);
+    padding: 0 var(--spacing-3xsmall);
+    font-size: var(--text-body-2-size);
   }
 
-  &--lg {
+  &[data-size='lg'] {
     height: 48px;
-    padding: 0 var(--space-5);
-    font-size: var(--font-size-md);
+    padding: 0 var(--spacing-2xsmall);
+    font-size: var(--text-body-1-size);
   }
 
   // ------------------------------------------------------------------
   // Modifiers
   // ------------------------------------------------------------------
-  &--full-width {
+  &[data-full-width] {
     width: 100%;
   }
 
-  &__icon {
+  .scener-button-icon {
     @include flex-center;
     flex-shrink: 0;
 
@@ -98,11 +116,11 @@
     }
   }
 
-  &__label {
+  .scener-button-label {
     @include truncate(1);
   }
 
-  &__spinner {
+  .scener-button-spinner {
     width: 16px;
     height: 16px;
     border-radius: 50%;

@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { RadiusSample } from './Radius';
+
+<Meta title='TOKENS/Radius' />
+
+<div className="scener-docs-page" style={{ fontFamily: 'Pretendard, sans-serif' }}>
+
+# Radius
+
+SCENE;er의 radius는 **5단계 스케일**을 따릅니다. 버튼이나 뱃지 같은 작은 요소는 작은 radius를, 카드나 모달 같은 큰 요소는 큰 radius를 사용합니다.
+
+<div>
+  <RadiusSample variable='--radius-sm' pxValue='6px' />
+  <RadiusSample variable='--radius-md' pxValue='10px' />
+  <RadiusSample variable='--radius-lg' pxValue='14px' />
+  <RadiusSample variable='--radius-xl' pxValue='20px' />
+  <RadiusSample variable='--radius-full' pxValue='999px (원형)' />
+</div>
+
+## 사용 규칙
+
+1. 컴포넌트 SCSS에서는 primitive(`--radius-6`, `--radius-10` 등 px값 기반 토큰)를 직접 쓰지 않고, 항상 `var(--radius-sm)` 형태의 semantic 토큰을 사용합니다.
+2. 버튼, 뱃지, 태그처럼 작은 요소는 `--radius-sm`~`--radius-md`를 사용합니다.
+3. 카드, 모달, 바텀시트처럼 큰 요소는 `--radius-lg`~`--radius-xl`을 사용합니다.
+4. 아바타나 별점 등 원형 요소에는 `--radius-full`을 사용합니다.
+
+</div>
