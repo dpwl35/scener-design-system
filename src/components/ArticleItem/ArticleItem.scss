@@ -1,0 +1,75 @@
+@import '../../styles/mixins';
+
+.scener-article-item {
+  display: flex;
+
+  // ------------------------------------------------------------------
+  // card — 세로 배치, 큰 썸네일
+  // ------------------------------------------------------------------
+  &[data-layout='card'] {
+    flex-direction: column;
+
+    .scener-article-thumbnail {
+      height: 160px;
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--spacing-4xsmall);
+    }
+
+    .scener-article-title {
+      font-size: var(--text-h3-size);
+      font-weight: var(--text-h3-weight);
+      line-height: var(--text-h3-line-height);
+    }
+  }
+
+  // ------------------------------------------------------------------
+  // list — 가로 배치, 작은 썸네일
+  // ------------------------------------------------------------------
+  &[data-layout='list'] {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-4xsmall);
+
+    .scener-article-thumbnail {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      flex-shrink: 0;
+    }
+
+    .scener-article-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .scener-article-title {
+      @include truncate(1);
+      font-size: var(--text-body-1-size);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+.scener-article-thumbnail {
+  background-color: var(--color-background-inset);
+  background-size: cover;
+  background-position: center;
+}
+
+.scener-article-label {
+  font-size: var(--text-body-4-size);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-6xsmall);
+}
+
+.scener-article-title {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-6xsmall);
+}
+
+.scener-article-meta {
+  font-size: var(--text-body-3-size);
+  color: var(--color-text-secondary);
+}
