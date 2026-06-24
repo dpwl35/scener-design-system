@@ -12,7 +12,7 @@
   // ------------------------------------------------------------------
   // Dot — 항상 동그라미
   // ------------------------------------------------------------------
-  .scener-badge-dot {
+  .scener-badge_dot {
     border-radius: 50%;
     flex-shrink: 0;
   }
@@ -20,32 +20,32 @@
   // ------------------------------------------------------------------
   // Size — 점, 텍스트, padding이 함께 줄어듦
   // ------------------------------------------------------------------
-  &[data-size='md'] {
+  &[data-size='medium'] {
     gap: 6px;
 
-    .scener-badge-dot {
+    .scener-badge_dot {
       width: 7px;
       height: 7px;
       position: relative;
       top: 1px;
     }
 
-    .scener-badge-label {
+    .scener-badge_label {
       font-size: var(--text-body-3-size);
     }
   }
 
-  &[data-size='sm'] {
+  &[data-size='small'] {
     gap: 4px;
 
-    .scener-badge-dot {
+    .scener-badge_dot {
       width: 5px;
       height: 5px;
       position: relative;
       top: 2px;
     }
 
-    .scener-badge-label {
+    .scener-badge_label {
       font-size: var(--text-body-4-size);
     }
   }
@@ -60,21 +60,21 @@
   &[data-appearance='outline'] {
     border: 1px solid currentColor;
 
-    &[data-size='md'] {
+    &[data-size='medium'] {
       padding: 4px 11px;
     }
 
-    &[data-size='sm'] {
+    &[data-size='small'] {
       padding: 3px 9px;
     }
   }
 
   &[data-appearance='filled'] {
-    &[data-size='md'] {
+    &[data-size='medium'] {
       padding: 5px 12px;
     }
 
-    &[data-size='sm'] {
+    &[data-size='small'] {
       padding: 4px 10px;
     }
   }
@@ -84,45 +84,45 @@
   // ------------------------------------------------------------------
   &[data-appearance='outline'][data-key='exhibition'] {
     color: var(--color-category-exhibition);
-    .scener-badge-dot {
+    .scener-badge_dot {
       background-color: var(--color-category-exhibition);
     }
   }
 
   &[data-appearance='outline'][data-key='performance'] {
     color: var(--color-category-performance);
-    .scener-badge-dot {
+    .scener-badge_dot {
       background-color: var(--color-category-performance);
     }
   }
 
   &[data-appearance='outline'][data-key='popup'] {
     color: var(--color-category-popup);
-    .scener-badge-dot {
+    .scener-badge_dot {
       background-color: var(--color-category-popup);
     }
   }
 
   &[data-appearance='outline'][data-key='film'] {
     color: var(--color-category-film);
-    .scener-badge-dot {
+    .scener-badge_dot {
       background-color: var(--color-category-film);
     }
   }
 
-  &[data-appearance='subtle'][data-key='exhibition'] .scener-badge-dot {
+  &[data-appearance='subtle'][data-key='exhibition'] .scener-badge_dot {
     background-color: var(--color-category-exhibition);
   }
 
-  &[data-appearance='subtle'][data-key='performance'] .scener-badge-dot {
+  &[data-appearance='subtle'][data-key='performance'] .scener-badge_dot {
     background-color: var(--color-category-performance);
   }
 
-  &[data-appearance='subtle'][data-key='popup'] .scener-badge-dot {
+  &[data-appearance='subtle'][data-key='popup'] .scener-badge_dot {
     background-color: var(--color-category-popup);
   }
 
-  &[data-appearance='subtle'][data-key='film'] .scener-badge-dot {
+  &[data-appearance='subtle'][data-key='film'] .scener-badge_dot {
     background-color: var(--color-category-film);
   }
 
@@ -133,8 +133,8 @@
     background-color: rgba(200, 255, 61, 0.16);
     color: var(--lime-500);
 
-    .scener-badge-dot {
-      background-color: var(--lime-400);
+    .scener-badge_dot {
+      background-color: var(--color-brand-primary);
     }
   }
 
@@ -142,8 +142,8 @@
     background-color: rgba(255, 197, 61, 0.16);
     color: var(--orange-300);
 
-    .scener-badge-dot {
-      background-color: var(--orange-300);
+    .scener-badge_dot {
+      background-color: var(--color-status-upcoming);
     }
   }
 
@@ -151,7 +151,7 @@
     background-color: rgba(168, 168, 168, 0.16);
     color: var(--color-text-secondary);
 
-    .scener-badge-dot {
+    .scener-badge_dot {
       background-color: var(--color-text-secondary);
     }
   }

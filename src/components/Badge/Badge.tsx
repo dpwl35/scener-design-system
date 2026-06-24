@@ -4,7 +4,7 @@ import './Badge.scss';
 export type Category = 'exhibition' | 'performance' | 'popup' | 'film';
 export type Status = 'ongoing' | 'upcoming' | 'ended';
 export type BadgeAppearance = 'subtle' | 'outline';
-export type BadgeSize = 'sm' | 'md';
+export type BadgeSize = 'small' | 'medium';
 
 const CATEGORY_LABEL: Record<Category, string> = {
   exhibition: '전시',
@@ -42,7 +42,7 @@ export const Badge = ({
   category,
   status,
   appearance = 'subtle',
-  size = 'md',
+  size = 'medium',
   className = '',
   ...rest
 }: BadgeProps) => {
@@ -63,8 +63,8 @@ export const Badge = ({
       data-size={size}
       {...rest}
     >
-      <span className='scener-badge-dot' aria-hidden='true' />
-      <span className='scener-badge-label'>{label}</span>
+      <span className='scener-badge_dot' aria-hidden='true' />
+      <span className='scener-badge_label'>{label}</span>
     </div>
   );
 };

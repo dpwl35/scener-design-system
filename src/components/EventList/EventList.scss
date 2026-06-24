@@ -5,7 +5,7 @@
   flex-direction: column;
 }
 
-.scener-event-item {
+.scener-event-list_item {
   @include flex-center(var(--spacing-4xsmall));
   padding: var(--spacing-4xsmall) 0;
   border-bottom: 1px solid var(--color-border-default);
@@ -15,10 +15,10 @@
   }
 }
 
-.scener-event-thumbnail {
+.scener-event-list_thumbnail {
   width: 56px;
   height: 56px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-medium);
   background-color: var(--color-background-inset);
   flex-shrink: 0;
   overflow: hidden;
@@ -30,12 +30,12 @@
   }
 }
 
-.scener-event-left {
+.scener-event-list_content {
   flex: 1;
   min-width: 0;
 }
 
-.scener-event-title {
+.scener-event-list_title {
   @include truncate(1);
   font-size: var(--text-body-1-size);
   font-weight: var(--font-weight-bold);
@@ -43,17 +43,17 @@
   margin: var(--spacing-6xsmall) 0 var(--spacing-6xsmall);
 }
 
-.scener-event-meta {
+.scener-event-list_meta {
   font-size: var(--text-body-3-size);
   color: var(--color-text-secondary);
 }
 
-.scener-dday-tag {
+.scener-event-list_dday {
   flex-shrink: 0;
   font-size: var(--text-body-3-size);
   font-weight: var(--font-weight-bold);
   padding: var(--spacing-5xsmall) var(--spacing-4xsmall);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-medium);
   background-color: var(--color-background-elevated);
   color: var(--color-text-secondary);
 

@@ -3,7 +3,7 @@ import './Button.scss';
 
 export type ButtonCategory = 'primary' | 'secondary' | 'ghost';
 export type ButtonVariant = 'default' | 'danger';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonSize = 'small' | 'medium' | 'large';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** 버튼의 시각적 무게감 */
@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     {
       category = 'primary',
       variant = 'default',
-      size = 'md',
+      size = 'medium',
       fullWidth = false,
       loading = false,
       disabled,
@@ -56,10 +56,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...rest}
       >
         {loading ? (
-          <span className='scener-button-spinner' aria-hidden='true' />
+          <span className='scener-button_spinner' aria-hidden='true' />
         ) : (
           <>
-            <span className='scener-button-label'>{children}</span>
+            <span className='scener-button_label'>{children}</span>
           </>
         )}
       </button>

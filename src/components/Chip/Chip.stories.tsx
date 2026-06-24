@@ -10,7 +10,7 @@ const meta = {
     docs: {
       description: {
         component:
-          '\\#해시태그 형태의 선택 가능한 칩입니다. 전시·행사 상세페이지의 분위기 태그(예: #몽환적인, #가족과함께)나 필터링용 태그 선택에 사용합니다. 선택 시 배경이 브랜드 컬러(라임)로 바뀝니다. PC에서는 md, 모바일에서는 sm 사이즈를 권장합니다.',
+          '\\#해시태그 형태의 선택 가능한 칩입니다. 전시·행사 상세페이지의 분위기 태그(예: #몽환적인, #가족과함께)나 필터링용 태그 선택에 사용합니다. 선택 시 배경이 브랜드 컬러(라임)로 바뀝니다. PC에서는 medium, 모바일에서는 small 사이즈를 권장합니다.',
       },
     },
   },
@@ -22,14 +22,14 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md'],
+      options: ['small', 'medium'],
       description: '칩 크기',
     },
   },
   args: {
     children: '아트',
     selected: false,
-    size: 'md',
+    size: 'medium',
   },
 } satisfies Meta<typeof Chip>;
 
@@ -47,10 +47,10 @@ export const Selected: Story = {
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      <Chip {...args} size='sm'>
+      <Chip {...args} size='small'>
         모바일 사이즈
       </Chip>
-      <Chip {...args} size='md'>
+      <Chip {...args} size='medium'>
         PC 사이즈
       </Chip>
     </div>

@@ -25,6 +25,7 @@ const meta = {
     },
   },
   args: {
+    imageSrc: '',
     category: 'exhibition',
     status: 'ongoing',
     matchLabel: '96% 취향 일치',
@@ -47,6 +48,7 @@ export const Default: Story = {};
 
 export const Upcoming: Story = {
   args: {
+    imageSrc: '',
     category: 'performance',
     status: 'upcoming',
     matchLabel: '88% 취향 일치',

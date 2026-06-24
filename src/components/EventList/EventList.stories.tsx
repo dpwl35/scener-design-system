@@ -17,12 +17,14 @@ const meta = {
   args: {
     items: [
       {
+        thumbnailSrc: '',
         category: 'performance',
         title: '실내악 시리즈 Vol.3',
         meta: '롯데콘서트홀 · 06.28',
         ddayLabel: 'D-3',
       },
       {
+        thumbnailSrc: '',
         category: 'film',
         title: '시네마테크 클래식 상영',
         meta: '서울아트시네마 · 06.21',
@@ -42,6 +44,7 @@ export const SingleItem: Story = {
   args: {
     items: [
       {
+        thumbnailSrc: '',
         category: 'exhibition',
         title: '빛: 영원에서 영원으로',
         meta: '대림미술관 · ~6.30',

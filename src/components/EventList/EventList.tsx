@@ -37,18 +37,23 @@ export const EventList = ({
       {...rest}
     >
       {items.map((item, index) => (
-        <div className='scener-event-item' key={index}>
-          <div className='scener-event-thumbnail'>
-            {item.thumbnailSrc && <img src={item.thumbnailSrc} alt='' />}
+        <div className='scener-event-list_item' key={index}>
+          <div className='scener-event-list_thumbnail'>
+            {item.thumbnailSrc && (
+              <img src={item.thumbnailSrc} alt={item.title} />
+            )}
           </div>
 
-          <div className='scener-event-left'>
-            <Badge category={item.category} size='sm' />
-            <div className='scener-event-title'>{item.title}</div>
-            <div className='scener-event-meta'>{item.meta}</div>
+          <div className='scener-event-list_content'>
+            <Badge category={item.category} size='small' />
+            <div className='scener-event-list_title'>{item.title}</div>
+            <div className='scener-event-list_meta'>{item.meta}</div>
           </div>
 
-          <div className='scener-dday-tag' data-urgent={item.urgent ?? false}>
+          <div
+            className='scener-event-list_dday'
+            data-urgent={item.urgent ?? false}
+          >
             {item.ddayLabel}
           </div>
         </div>

@@ -51,51 +51,55 @@ export const Title = (props: TitleProps) => {
   const baseClassName = ['scener-title', className].filter(Boolean).join(' ');
 
   if (variant === 'recommendation') {
-    const { label, title, description, ...divProps } = rest as Omit<
+    const recommendationRest = rest as Omit<
       RecommendationProps,
       'variant' | 'className'
     >;
+    const { label, title, description, ...divProps } = recommendationRest;
     return (
       <div
         className={baseClassName}
         data-variant='recommendation'
         {...divProps}
       >
-        <div className='scener-title-label'>{label}</div>
-        <div className='scener-title-title'>{title}</div>
-        <div className='scener-title-description'>{description}</div>
+        <div className='scener-title_label'>{label}</div>
+        <div className='scener-title_title'>{title}</div>
+        <div className='scener-title_description'>{description}</div>
       </div>
     );
   }
 
   if (variant === 'withAction') {
+    const withActionRest = rest as Omit<
+      WithActionProps,
+      'variant' | 'className'
+    >;
     const {
       label,
       title,
       actionLabel = '더보기',
       onAction,
       ...divProps
-    } = rest as Omit<WithActionProps, 'variant' | 'className'>;
+    } = withActionRest;
     return (
       <div className={baseClassName} data-variant='withAction' {...divProps}>
-        <div className='scener-title-text'>
-          <div className='scener-title-label'>{label}</div>
-          <div className='scener-title-title'>{title}</div>
+        <div className='scener-title_text'>
+          <div className='scener-title_label'>{label}</div>
+          <div className='scener-title_title'>{title}</div>
         </div>
-        <Button category='ghost' size='sm' onClick={onAction}>
+        <Button category='ghost' size='small' onClick={onAction}>
           {actionLabel}
         </Button>
       </div>
     );
   }
-  const { label, title, ...divProps } = rest as Omit<
-    SimpleProps,
-    'variant' | 'className'
-  >;
+
+  const simpleRest = rest as Omit<SimpleProps, 'variant' | 'className'>;
+  const { label, title, ...divProps } = simpleRest;
   return (
     <div className={baseClassName} data-variant='simple' {...divProps}>
-      <div className='scener-title-label'>{label}</div>
-      <div className='scener-title-title'>{title}</div>
+      <div className='scener-title_label'>{label}</div>
+      <div className='scener-title_title'>{title}</div>
     </div>
   );
 };

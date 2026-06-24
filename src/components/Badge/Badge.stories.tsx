@@ -17,7 +17,7 @@ const meta = {
   args: {
     category: 'exhibition',
     appearance: 'subtle',
-    size: 'md',
+    size: 'medium',
   },
 } satisfies Meta<typeof Badge>;
 
@@ -98,8 +98,8 @@ export const Sizes: Story = {
   args: { category: 'exhibition' },
   render: () => (
     <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-      <Badge category='exhibition' size='sm' />
-      <Badge category='exhibition' size='md' />
+      <Badge category='exhibition' size='medium' />
+      <Badge category='exhibition' size='medium' />
     </div>
   ),
 };

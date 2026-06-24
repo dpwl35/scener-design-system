@@ -27,7 +27,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
+      options: ['small', 'medium', 'large'],
       description: '버튼 크기',
     },
     fullWidth: {
@@ -46,7 +46,7 @@ const meta = {
     children: '버튼',
     category: 'primary',
     variant: 'default',
-    size: 'md',
+    size: 'medium',
     fullWidth: false,
     loading: false,
     disabled: false,
@@ -101,13 +101,13 @@ export const Danger: Story = {
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-      <Button {...args} size='sm'>
+      <Button {...args} size='small'>
         Small
       </Button>
-      <Button {...args} size='md'>
+      <Button {...args} size='medium'>
         Medium
       </Button>
-      <Button {...args} size='lg'>
+      <Button {...args} size='large'>
         Large
       </Button>
     </div>

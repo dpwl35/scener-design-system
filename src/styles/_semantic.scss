@@ -8,36 +8,9 @@
 // ==========================================================================
 
 // --------------------------------------------------------------------
-// Light Theme
-// --------------------------------------------------------------------
-:root,
-[data-theme='light'] {
-  // Background
-  --color-background-base: var(--gray-9);
-  --color-background-elevated: var(--gray-8);
-  --color-background-inset: var(--gray-7);
-  --color-background-overlay: rgba(0, 0, 0, 0.4);
-
-  // Text
-  --color-text-primary: var(--gray-1);
-  --color-text-secondary: var(--gray-3);
-  --color-text-tertiary: var(--gray-5);
-  --color-text-disabled: var(--gray-6);
-
-  // Border
-  --color-border-default: var(--gray-7);
-  --color-border-strong: var(--gray-6);
-
-  // Status — 진행 상태
-  --color-status-ended: var(--gray-5);
-
-  // Rating star
-  --color-star-empty: var(--gray-6);
-}
-
-// --------------------------------------------------------------------
 // Dark Theme
 // --------------------------------------------------------------------
+:root,
 [data-theme='dark'] {
   // Background
   --color-background-base: var(--gray-1);
@@ -46,6 +19,7 @@
   --color-background-overlay: rgba(0, 0, 0, 0.6);
 
   // Text
+  --color-brand-primary: var(--lime-300);
   --color-text-primary: var(--gray-9);
   --color-text-secondary: var(--gray-7);
   --color-text-tertiary: var(--gray-5);
@@ -63,13 +37,42 @@
 }
 
 // --------------------------------------------------------------------
+// Light Theme
+// --------------------------------------------------------------------
+
+[data-theme='light'] {
+  // Background
+  --color-background-base: var(--gray-9);
+  --color-background-elevated: var(--gray-8);
+  --color-background-inset: var(--gray-7);
+  --color-background-overlay: rgba(0, 0, 0, 0.4);
+
+  // Text
+  --color-brand-primary: var(--lime-400);
+  --color-text-primary: var(--gray-1);
+  --color-text-secondary: var(--gray-3);
+  --color-text-tertiary: var(--gray-5);
+  --color-text-disabled: var(--gray-6);
+
+  // Border
+  --color-border-default: var(--gray-7);
+  --color-border-strong: var(--gray-6);
+
+  // Status — 진행 상태
+  --color-status-ended: var(--gray-5);
+
+  // Rating star
+  --color-star-empty: var(--gray-6);
+}
+
+// --------------------------------------------------------------------
 // Theme-independent tokens
 // 브랜드 컬러, 카테고리 컬러, 상태 컬러, 타이포, spacing, radius는
 // 다크/라이트와 무관하게 항상 같은 값을 가집니다.
 // --------------------------------------------------------------------
 :root {
   // Brand
-  --color-brand-primary: var(--lime-300);
+  --color-brand-primary: var(--lime-400);
   --color-brand-primary-hover: var(--lime-200);
   --color-brand-primary-active: var(--lime-400);
   --color-brand-on-primary: #1a2e00;

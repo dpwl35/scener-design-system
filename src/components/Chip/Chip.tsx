@@ -6,8 +6,8 @@ export interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   /** 선택된 상태 여부 */
   selected?: boolean;
-  /** 칩 크기 — PC는 md, 모바일은 sm을 권장합니다 */
-  size?: 'sm' | 'md';
+  /** 칩 크기 — PC는 medium, 모바일은 small을 권장합니다 */
+  size?: 'small' | 'medium';
 }
 
 /**
@@ -18,7 +18,7 @@ export interface ChipProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Chip = ({
   children,
   selected = false,
-  size = 'md',
+  size = 'medium',
   className = '',
   ...rest
 }: ChipProps) => {

@@ -4,19 +4,16 @@
   @include flex-center(var(--spacing-5xsmall));
   position: relative;
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-medium);
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition:
-    background-color 0.15s ease,
-    transform 0.1s ease,
-    opacity 0.15s ease;
+  transition: transform 0.1s ease-out;
   white-space: nowrap;
   @include focus-ring;
 
   &:active:not(:disabled) {
-    transform: scale(0.98);
+    transform: scale(0.97);
   }
 
   &:disabled {
@@ -65,11 +62,10 @@
     background-color: transparent;
     color: var(--color-text-secondary);
     padding: var(--spacing-6xsmall);
-    height: auto;
+    height: fit-content;
 
     &:hover:not(:disabled) {
       color: var(--color-text-primary);
-      background-color: var(--color-background-elevated);
     }
   }
 
@@ -81,19 +77,19 @@
   // ------------------------------------------------------------------
   // Size
   // ------------------------------------------------------------------
-  &[data-size='sm'] {
+  &[data-size='small'] {
     height: 32px;
     padding: 0 var(--spacing-4xsmall);
     font-size: var(--text-body-3-size);
   }
 
-  &[data-size='md'] {
+  &[data-size='medium'] {
     height: 40px;
     padding: 0 var(--spacing-3xsmall);
     font-size: var(--text-body-2-size);
   }
 
-  &[data-size='lg'] {
+  &[data-size='large'] {
     height: 48px;
     padding: 0 var(--spacing-2xsmall);
     font-size: var(--text-body-1-size);
@@ -106,7 +102,7 @@
     width: 100%;
   }
 
-  .scener-button-icon {
+  .scener-button_icon {
     @include flex-center;
     flex-shrink: 0;
 
@@ -116,11 +112,11 @@
     }
   }
 
-  .scener-button-label {
+  .scener-button_label {
     @include truncate(1);
   }
 
-  .scener-button-spinner {
+  .scener-button_spinner {
     width: 16px;
     height: 16px;
     border-radius: 50%;

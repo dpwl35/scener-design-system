@@ -12,21 +12,26 @@ export interface ArticleItemProps extends HTMLAttributes<HTMLDivElement> {
   categoryLabel: string;
   /** 아티클 제목 */
   title: string;
-  /** 작성자 · 읽는 시간. 예: "에디터 윤 · 4분" */
-  meta: string;
+  /** 작성자 이름. 예: "에디터 윤" */
+  author: string;
+  /** 읽는 시간(분 단위 숫자). 예: 4 */
+  readTime: number;
 }
 
 /**
  * 에디터 아티클을 보여주는 컴포넌트.
  * layout="card"는 메인 추천 아티클용(이미지 아래 텍스트), layout="list"는
  * 작은 썸네일과 텍스트를 가로로 배치하는 리스트용입니다.
+ * title, author, readTime은 각각 독립된 데이터로 받아, 마크업과 포맷팅(구분자, 단위)을
+ * 컴포넌트 내부에서 책임집니다.
  */
 export const ArticleItem = ({
   layout = 'card',
   imageSrc,
   categoryLabel,
   title,
-  meta,
+  author,
+  readTime,
   className = '',
   ...rest
 }: ArticleItemProps) => {
@@ -36,15 +41,17 @@ export const ArticleItem = ({
       data-layout={layout}
       {...rest}
     >
-      <div
-        className='scener-article-thumbnail'
-        style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined}
-      />
+      <div className='scener-article-item_thumbnail'>
+        {imageSrc && <img src={imageSrc} alt={title} />}
+      </div>
 
-      <div className='scener-article-content'>
-        <div className='scener-article-label'>{categoryLabel}</div>
-        <div className='scener-article-title'>{title}</div>
-        <div className='scener-article-meta'>{meta}</div>
+      <div className='scener-article-item_content'>
+        <p className='scener-article-item_label'>{categoryLabel}</p>
+        <p className='scener-article-item_title'>{title}</p>
+        <div className='scener-article-item_meta'>
+          <span className='scener-article-item_author'>{author}</span>
+          <span className='scener-article-item_readtime'>{readTime}분</span>
+        </div>
       </div>
     </div>
   );

@@ -27,13 +27,13 @@
     color: var(--color-brand-on-primary);
   }
 
-  &[data-size='sm'] {
+  &[data-size='small'] {
     height: 28px;
     padding: 0 var(--spacing-4xsmall);
     font-size: var(--text-body-4-size);
   }
 
-  &[data-size='md'] {
+  &[data-size='medium'] {
     height: 34px;
     padding: 0 var(--spacing-3xsmall);
     font-size: var(--text-body-3-size);

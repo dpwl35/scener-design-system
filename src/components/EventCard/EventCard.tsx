@@ -37,17 +37,16 @@ export const EventCard = ({
       className={['scener-event-card', className].filter(Boolean).join(' ')}
       {...rest}
     >
-      <div
-        className='scener-event-card-image'
-        style={imageSrc ? { backgroundImage: `url(${imageSrc})` } : undefined}
-      />
+      <div className='scener-event-card_image'>
+        {imageSrc && <img src={imageSrc} alt={contentTitle} />}
+      </div>
 
-      <div className='scener-event-card-badges'>
+      <div className='scener-event-card_badges'>
         <Badge category={category} appearance='outline' />
         <Badge status={status} />
       </div>
 
-      <div className='scener-event-card-overlay'>
+      <div className='scener-event-card_overlay'>
         <Title
           variant='recommendation'
           label={matchLabel}
