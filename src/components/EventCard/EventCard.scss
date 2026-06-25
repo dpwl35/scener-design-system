@@ -1,0 +1,38 @@
+@import '../../styles/mixins';
+
+.scener-event-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  background-color: var(--color-background-inset);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scener-event-card_image {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.scener-event-card_badges {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-5xsmall);
+  padding: var(--spacing-3xsmall);
+}
+
+.scener-event-card_overlay {
+  position: relative;
+  padding: var(--spacing-3xsmall);
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+}
