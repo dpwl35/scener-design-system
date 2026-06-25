@@ -2,6 +2,7 @@ import type { Preview, ReactRenderer } from '@storybook/react-vite';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../src/styles/global.scss';
+import '../src/styles/storybook.scss';
 
 const preview: Preview = {
   decorators: [
