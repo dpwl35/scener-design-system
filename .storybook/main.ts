@@ -1,7 +1,7 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/html-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|ts)'],
   addons: [
     '@chromatic-com/storybook',
     '@storybook/addon-vitest',
@@ -10,6 +10,6 @@ const config: StorybookConfig = {
     '@storybook/addon-mcp',
     '@storybook/addon-themes',
   ],
-  framework: '@storybook/react-vite',
+  framework: '@storybook/html-vite',
 };
 export default config;

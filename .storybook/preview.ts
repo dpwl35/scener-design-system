@@ -1,4 +1,4 @@
-import type { Preview, ReactRenderer } from '@storybook/react-vite';
+import type { Preview } from '@storybook/html-vite';
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import '../src/styles/global.scss';
@@ -28,7 +28,7 @@ const preview: Preview = {
 
       return StoryFn();
     },
-    withThemeByDataAttribute<ReactRenderer>({
+    withThemeByDataAttribute({
       themes: {
         dark: 'dark',
         light: 'light',
