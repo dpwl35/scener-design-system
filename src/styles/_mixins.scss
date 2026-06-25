@@ -2,7 +2,11 @@
 // SCENE;er — Shared mixins
 // ==========================================================================
 
-@mixin text-style($size, $weight: var(--font-weight-regular), $line-height: var(--line-height-base)) {
+@mixin text-style(
+  $size,
+  $weight: var(--font-weight-regular),
+  $line-height: var(--line-height-base)
+) {
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;

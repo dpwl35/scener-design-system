@@ -1,29 +1,41 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import { SpacingSample } from './Spacing';
+export const meta = {
+  title: 'TOKENS/Spacing',
+};
 
-<Meta title='TOKENS/Spacing' />
+import { createSpacingList } from './Spacing';
 
-<div  className="scener-docs-page"  style={{ fontFamily: 'Pretendard, sans-serif' }}>
+<div className="scener-docs-page" style={{ fontFamily: 'Pretendard, sans-serif' }}>
 
 # Spacing
 
 SCENE;er의 spacing은 **4px ~ 120px, 13단계 스케일**을 따릅니다. 작은 값은 4px 단위로 촘촘하게, 큰 값은 점점 넓은 간격으로 늘어납니다. 컴포넌트 내부 패딩, 요소 간 간격, 레이아웃 마진 등 모든 간격 값에 이 토큰을 사용합니다.
 
-<div>
-  <SpacingSample variable='--spacing-6xsmall' pxValue='4px' />
-  <SpacingSample variable='--spacing-5xsmall' pxValue='8px' />
-  <SpacingSample variable='--spacing-4xsmall' pxValue='12px' />
-  <SpacingSample variable='--spacing-3xsmall' pxValue='16px' />
-  <SpacingSample variable='--spacing-2xsmall' pxValue='20px' />
-  <SpacingSample variable='--spacing-xsmall' pxValue='24px' />
-  <SpacingSample variable='--spacing-small' pxValue='32px' />
-  <SpacingSample variable='--spacing-medium' pxValue='40px' />
-  <SpacingSample variable='--spacing-large' pxValue='48px' />
-  <SpacingSample variable='--spacing-xlarge' pxValue='60px' />
-  <SpacingSample variable='--spacing-2xlarge' pxValue='80px' />
-  <SpacingSample variable='--spacing-3xlarge' pxValue='100px' />
-  <SpacingSample variable='--spacing-4xlarge' pxValue='120px' />
-</div>
+<div
+  ref={(node) => {
+    if (node) {
+      node.innerHTML = '';
+      node.appendChild(
+        createSpacingList({
+          items: [
+            { variable: '--spacing-6xsmall', pxValue: '4px' },
+            { variable: '--spacing-5xsmall', pxValue: '8px' },
+            { variable: '--spacing-4xsmall', pxValue: '12px' },
+            { variable: '--spacing-3xsmall', pxValue: '16px' },
+            { variable: '--spacing-2xsmall', pxValue: '20px' },
+            { variable: '--spacing-xsmall', pxValue: '24px' },
+            { variable: '--spacing-small', pxValue: '32px' },
+            { variable: '--spacing-medium', pxValue: '40px' },
+            { variable: '--spacing-large', pxValue: '48px' },
+            { variable: '--spacing-xlarge', pxValue: '60px' },
+            { variable: '--spacing-2xlarge', pxValue: '80px' },
+            { variable: '--spacing-3xlarge', pxValue: '100px' },
+            { variable: '--spacing-4xlarge', pxValue: '120px' },
+          ],
+        }),
+      );
+    }
+  }}
+/>
 
 ## 사용 규칙
 

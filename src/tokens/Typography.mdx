@@ -1,75 +1,86 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+export const meta = {
+  title: 'TOKENS/Typography',
+};
 
-import { TypeSample, TypeSampleGroup } from './Typography';
-
-<Meta title='TOKENS/Typography' />
+import { createTypeSampleGroup } from './Typography';
 
 # Typography
 
 SCENE;er의 타이포그래피는 **Display / Heading / Body** 3가지 역할로 구성됩니다. Heading은 3단계(H1~H3), Body는 4단계(Body 1~4)로 세분화됩니다.
 
-<TypeSampleGroup>
-  <TypeSample
-    label='Display · 34/700'
-    sampleText='문화를 발견하다'
-    fontSize='var(--text-display-size)'
-    fontWeight='var(--text-display-weight)'
-    lineHeight='var(--text-display-line-height)'
-  />
-  <TypeSample
-    label='H1 · 26/700'
-    sampleText='이번주 전시'
-    fontSize='var(--text-h1-size)'
-    fontWeight='var(--text-h1-weight)'
-    lineHeight='var(--text-h1-line-height)'
-  />
-  <TypeSample
-    label='H2 · 22/700'
-    sampleText='빛: 영원에서 영원으로'
-    fontSize='var(--text-h2-size)'
-    fontWeight='var(--text-h2-weight)'
-    lineHeight='var(--text-h2-line-height)'
-  />
-  <TypeSample
-    label='H3 · 18/700'
-    sampleText='투데이 아티클'
-    fontSize='var(--text-h3-size)'
-    fontWeight='var(--text-h3-weight)'
-    lineHeight='var(--text-h3-line-height)'
-  />
-  <TypeSample
-    label='Body 1 · 15/400'
-    sampleText='전시·공연·팝업·영화를 장르 구분 없이 발견하세요.'
-    fontSize='var(--text-body-1-size)'
-    fontWeight='var(--text-body-1-weight)'
-    lineHeight='var(--text-body-1-line-height)'
-  />
-  <TypeSample
-    label='Body 2 · 14/400'
-    sampleText='대림미술관 · 종로구'
-    fontSize='var(--text-body-2-size)'
-    fontWeight='var(--text-body-2-weight)'
-    lineHeight='var(--text-body-2-line-height)'
-  />
-  <TypeSample
-    label='Body 3 · 13/400'
-    sampleText='2026.06.22 ~ 2026.08.30'
-    fontSize='var(--text-body-3-size)'
-    fontWeight='var(--text-body-3-weight)'
-    lineHeight='var(--text-body-3-line-height)'
-  />
-  <TypeSample
-    label='Body 4 · 11/400'
-    sampleText='THIS WEEK'
-    fontSize='var(--text-body-4-size)'
-    fontWeight='var(--text-body-4-weight)'
-    lineHeight='var(--text-body-4-line-height)'
-    color='var(--color-brand-primary)'
-    textTransform='uppercase'
-    letterSpacing='0.08em'
-    isLast
-  />
-</TypeSampleGroup>
+<div
+  ref={(node) => {
+    if (node) {
+      node.innerHTML = '';
+      node.appendChild(
+        createTypeSampleGroup({
+          items: [
+            {
+              label: 'Display · 34/700',
+              sampleText: '문화를 발견하다',
+              fontSize: 'var(--text-display-size)',
+              fontWeight: 'var(--text-display-weight)',
+              lineHeight: 'var(--text-display-line-height)',
+            },
+            {
+              label: 'H1 · 26/700',
+              sampleText: '이번주 전시',
+              fontSize: 'var(--text-h1-size)',
+              fontWeight: 'var(--text-h1-weight)',
+              lineHeight: 'var(--text-h1-line-height)',
+            },
+            {
+              label: 'H2 · 22/700',
+              sampleText: '빛: 영원에서 영원으로',
+              fontSize: 'var(--text-h2-size)',
+              fontWeight: 'var(--text-h2-weight)',
+              lineHeight: 'var(--text-h2-line-height)',
+            },
+            {
+              label: 'H3 · 18/700',
+              sampleText: '투데이 아티클',
+              fontSize: 'var(--text-h3-size)',
+              fontWeight: 'var(--text-h3-weight)',
+              lineHeight: 'var(--text-h3-line-height)',
+            },
+            {
+              label: 'Body 1 · 15/400',
+              sampleText: '전시·공연·팝업·영화를 장르 구분 없이 발견하세요.',
+              fontSize: 'var(--text-body-1-size)',
+              fontWeight: 'var(--text-body-1-weight)',
+              lineHeight: 'var(--text-body-1-line-height)',
+            },
+            {
+              label: 'Body 2 · 14/400',
+              sampleText: '대림미술관 · 종로구',
+              fontSize: 'var(--text-body-2-size)',
+              fontWeight: 'var(--text-body-2-weight)',
+              lineHeight: 'var(--text-body-2-line-height)',
+            },
+            {
+              label: 'Body 3 · 13/400',
+              sampleText: '2026.06.22 ~ 2026.08.30',
+              fontSize: 'var(--text-body-3-size)',
+              fontWeight: 'var(--text-body-3-weight)',
+              lineHeight: 'var(--text-body-3-line-height)',
+            },
+            {
+              label: 'Body 4 · 11/400',
+              sampleText: 'THIS WEEK',
+              fontSize: 'var(--text-body-4-size)',
+              fontWeight: 'var(--text-body-4-weight)',
+              lineHeight: 'var(--text-body-4-line-height)',
+              color: 'var(--color-brand-primary)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              isLast: true,
+            },
+          ],
+        }),
+      );
+    }
+  }}
+/>
 
 ## 사용 규칙
 
