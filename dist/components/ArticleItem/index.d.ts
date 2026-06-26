@@ -1,2 +1,1 @@
-import './ArticleItem';
 export type { ArticleLayout } from './ArticleItem';

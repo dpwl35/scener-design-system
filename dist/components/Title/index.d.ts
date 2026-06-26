@@ -1,2 +1,1 @@
-import './Title';
 export type { TitleVariant } from './Title';

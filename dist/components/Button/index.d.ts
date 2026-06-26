@@ -1,2 +1,1 @@
-import './Button';
 export type { ButtonCategory, ButtonVariant, ButtonSize } from './Button';

@@ -1,2 +1,1 @@
-import './EventList';
 export type { EventListItem } from './EventList';

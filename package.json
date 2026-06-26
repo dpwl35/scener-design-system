@@ -1,11 +1,26 @@
 {
   "name": "scener-design-system",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/scener-design-system.cjs",
+  "module": "./dist/scener-design-system.js",
+  "types": "./dist/scener-design-system.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/scener-design-system.js",
+      "require": "./dist/scener-design-system.cjs",
+      "types": "./dist/scener-design-system.d.ts"
+    },
+    "./style.css": "./dist/scener-design-system.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-lib": "vite build --config vite.lib.config.ts"
   },
   "repository": {
     "type": "git",
@@ -34,6 +49,7 @@
     "storybook": "^10.4.6",
     "typescript": "^6.0.3",
     "vite": "^8.1.0",
+    "vite-plugin-dts": "^5.0.3",
     "vitest": "^4.1.9"
   }
 }

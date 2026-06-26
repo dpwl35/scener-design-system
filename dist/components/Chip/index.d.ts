@@ -1,2 +1,1 @@
-import './Chip';
 export type { ChipSize } from './Chip';
