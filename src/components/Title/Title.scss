@@ -1,24 +1,24 @@
 @import '../../styles/mixins';
 
 .scener-title {
-  font-family: var(--font-family-base);
+  font-family: var(--scener-font-family-base);
 
   // ------------------------------------------------------------------
   // simple
   // ------------------------------------------------------------------
   &[data-variant='simple'] {
     .scener-title_label {
-      font-size: var(--text-body-1-size);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-brand-primary);
-      margin-bottom: var(--spacing-5xsmall);
+      font-size: var(--scener-text-body-1-size);
+      font-weight: var(--scener-font-weight-regular);
+      color: var(--scener-color-brand-primary);
+      margin-bottom: var(--scener-spacing-5xsmall);
     }
 
     .scener-title_title {
-      font-size: var(--text-display-size);
-      font-weight: var(--text-display-weight);
-      line-height: var(--text-display-line-height);
-      color: var(--color-text-primary);
+      font-size: var(--scener-text-display-size);
+      font-weight: var(--scener-text-display-weight);
+      line-height: var(--scener-text-display-line-height);
+      color: var(--scener-color-text-primary);
     }
   }
 
@@ -27,24 +27,24 @@
   // ------------------------------------------------------------------
   &[data-variant='recommendation'] {
     .scener-title_label {
-      font-size: var(--text-body-3-size);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-brand-primary);
-      margin-bottom: var(--spacing-5xsmall);
+      font-size: var(--scener-text-body-3-size);
+      font-weight: var(--scener-font-weight-semibold);
+      color: var(--scener-color-brand-primary);
+      margin-bottom: var(--scener-spacing-5xsmall);
     }
 
     .scener-title_title {
-      font-size: var(--text-h2-size);
-      font-weight: var(--text-h2-weight);
-      line-height: var(--text-h2-line-height);
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-6xsmall);
+      font-size: var(--scener-text-h2-size);
+      font-weight: var(--scener-text-h2-weight);
+      line-height: var(--scener-text-h2-line-height);
+      color: var(--scener-color-text-primary);
+      margin-bottom: var(--scener-spacing-6xsmall);
     }
 
     .scener-title_description {
-      font-size: var(--text-body-2-size);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-text-secondary);
+      font-size: var(--scener-text-body-2-size);
+      font-weight: var(--scener-font-weight-regular);
+      color: var(--scener-color-text-secondary);
     }
   }
 
@@ -56,18 +56,18 @@
     align-items: flex-end;
 
     .scener-title_label {
-      font-size: var(--text-body-4-size);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-brand-primary);
+      font-size: var(--scener-text-body-4-size);
+      font-weight: var(--scener-font-weight-semibold);
+      color: var(--scener-color-brand-primary);
       letter-spacing: 0.06em;
-      margin-bottom: var(--spacing-5xsmall);
+      margin-bottom: var(--scener-spacing-5xsmall);
     }
 
     .scener-title_title {
-      font-size: var(--text-h3-size);
-      font-weight: var(--text-h3-weight);
-      line-height: var(--text-h3-line-height);
-      color: var(--color-text-primary);
+      font-size: var(--scener-text-h3-size);
+      font-weight: var(--scener-text-h3-weight);
+      line-height: var(--scener-text-h3-line-height);
+      color: var(--scener-color-text-primary);
     }
   }
 }

@@ -11,14 +11,14 @@
 
     .scener-article-item_thumbnail {
       height: 160px;
-      border-radius: var(--radius-large);
-      margin-bottom: var(--spacing-4xsmall);
+      border-radius: var(--scener-radius-large);
+      margin-bottom: var(--scener-spacing-4xsmall);
     }
 
     .scener-article-item_title {
-      font-size: var(--text-h3-size);
-      font-weight: var(--text-h3-weight);
-      line-height: var(--text-h3-line-height);
+      font-size: var(--scener-text-h3-size);
+      font-weight: var(--scener-text-h3-weight);
+      line-height: var(--scener-text-h3-line-height);
       margin-top: 0;
     }
   }
@@ -29,12 +29,12 @@
   &[data-layout='list'] {
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-4xsmall);
+    gap: var(--scener-spacing-4xsmall);
 
     .scener-article-item_thumbnail {
       width: 56px;
       height: 56px;
-      border-radius: var(--radius-medium);
+      border-radius: var(--scener-radius-medium);
       flex-shrink: 0;
     }
 
@@ -45,8 +45,8 @@
 
     .scener-article-item_title {
       @include truncate(1);
-      font-size: var(--text-body-1-size);
-      font-weight: var(--font-weight-bold);
+      font-size: var(--scener-text-body-1-size);
+      font-weight: var(--scener-font-weight-bold);
       margin-top: 0;
     }
   }
@@ -54,7 +54,7 @@
 
 .scener-article-item_thumbnail {
   overflow: hidden;
-  background-color: var(--color-background-inset);
+  background-color: var(--scener-color-background-inset);
 
   img {
     display: block;
@@ -65,24 +65,24 @@
 }
 
 .scener-article-item_label {
-  font-size: var(--text-body-4-size);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-brand-primary);
+  font-size: var(--scener-text-body-4-size);
+  font-weight: var(--scener-font-weight-bold);
+  color: var(--scener-color-brand-primary);
   letter-spacing: 0.05em;
-  margin-bottom: var(--spacing-6xsmall);
+  margin-bottom: var(--scener-spacing-6xsmall);
 }
 
 .scener-article-item_title {
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-6xsmall);
+  color: var(--scener-color-text-primary);
+  margin-bottom: var(--scener-spacing-6xsmall);
 }
 
 .scener-article-item_meta {
   display: flex;
   align-items: center;
-  gap: var(--spacing-5xsmall);
-  font-size: var(--text-body-3-size);
-  color: var(--color-text-secondary);
+  gap: var(--scener-spacing-5xsmall);
+  font-size: var(--scener-text-body-3-size);
+  color: var(--scener-color-text-secondary);
 }
 
 .scener-article-item_author,
@@ -92,5 +92,5 @@
 
 .scener-article-item_author::after {
   content: '·';
-  margin-left: var(--spacing-5xsmall);
+  margin-left: var(--scener-spacing-5xsmall);
 }

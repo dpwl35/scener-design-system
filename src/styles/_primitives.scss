@@ -1,130 +1,131 @@
 // ==========================================================================
 // SCENE;er Design Tokens — Primitives
 // 원시 토큰: 실제 색상값, 의미가 부여되지 않은 raw 값
+// 모든 토큰은 --scener- 접두사를 붙여, 다른 프로젝트의 변수명과 충돌하지 않도록 합니다.
 // ==========================================================================
 
 :root {
   // --------------------------------------------------------------------
   // Brand — Main
   // --------------------------------------------------------------------
-  --lime-50: #f4ffd9;
-  --lime-100: #e9ffad;
-  --lime-200: #d9ff73;
-  --lime-300: #c8ff3d;
-  --lime-400: #b0e62a;
-  --lime-500: #8fc41a;
-  --lime-600: #6b9510;
+  --scener-lime-50: #f4ffd9;
+  --scener-lime-100: #e9ffad;
+  --scener-lime-200: #d9ff73;
+  --scener-lime-300: #c8ff3d;
+  --scener-lime-400: #b0e62a;
+  --scener-lime-500: #8fc41a;
+  --scener-lime-600: #6b9510;
 
   // --------------------------------------------------------------------
   // Category — Exhibition (전시)
   // --------------------------------------------------------------------
-  --purple-50: #efeafb;
-  --purple-100: #d6c9f5;
-  --purple-200: #ac97ea;
-  --purple-300: #7c5ce0;
-  --purple-400: #5f3fc4;
-  --purple-500: #472e96;
-  --purple-600: #321f6b;
+  --scener-purple-50: #efeafb;
+  --scener-purple-100: #d6c9f5;
+  --scener-purple-200: #ac97ea;
+  --scener-purple-300: #7c5ce0;
+  --scener-purple-400: #5f3fc4;
+  --scener-purple-500: #472e96;
+  --scener-purple-600: #321f6b;
 
   // --------------------------------------------------------------------
   // Category — Performance (공연)
   // --------------------------------------------------------------------
-  --pink-50: #fdeaf2;
-  --pink-100: #fac2dc;
-  --pink-200: #f58cb8;
-  --pink-300: #f5599c;
-  --pink-400: #d63680;
-  --pink-500: #a12760;
-  --pink-600: #701b43;
+  --scener-pink-50: #fdeaf2;
+  --scener-pink-100: #fac2dc;
+  --scener-pink-200: #f58cb8;
+  --scener-pink-300: #f5599c;
+  --scener-pink-400: #d63680;
+  --scener-pink-500: #a12760;
+  --scener-pink-600: #701b43;
 
   // --------------------------------------------------------------------
   // Category — Pop-up (팝업)
   // --------------------------------------------------------------------
-  --orange-50: #fff0e6;
-  --orange-100: #ffd3b3;
-  --orange-200: #ffab72;
-  --orange-300: #ff8a4d;
-  --orange-400: #e6661f;
-  --orange-500: #b04e16;
-  --orange-600: #7a360f;
+  --scener-orange-50: #fff0e6;
+  --scener-orange-100: #ffd3b3;
+  --scener-orange-200: #ffab72;
+  --scener-orange-300: #ff8a4d;
+  --scener-orange-400: #e6661f;
+  --scener-orange-500: #b04e16;
+  --scener-orange-600: #7a360f;
 
   // --------------------------------------------------------------------
   // Category — Film (영화)
   // --------------------------------------------------------------------
-  --blue-50: #eaeffe;
-  --blue-100: #c3d0fc;
-  --blue-200: #93a8f8;
-  --blue-300: #5c7cf0;
-  --blue-400: #3955d4;
-  --blue-500: #2a3fa0;
-  --blue-600: #1d2c70;
+  --scener-blue-50: #eaeffe;
+  --scener-blue-100: #c3d0fc;
+  --scener-blue-200: #93a8f8;
+  --scener-blue-300: #5c7cf0;
+  --scener-blue-400: #3955d4;
+  --scener-blue-500: #2a3fa0;
+  --scener-blue-600: #1d2c70;
 
   // --------------------------------------------------------------------
   // Gray scale (dark theme base)
   // --------------------------------------------------------------------
-  --gray-1: #1c1c1c;
-  --gray-2: #2d2d2d;
-  --gray-3: #404040;
-  --gray-4: #555555;
-  --gray-5: #7f7f7f;
-  --gray-6: #a8a8a8;
-  --gray-7: #d2d2d2;
-  --gray-8: #e2e2e2;
-  --gray-9: #f1f1f1;
+  --scener-gray-1: #1c1c1c;
+  --scener-gray-2: #2d2d2d;
+  --scener-gray-3: #404040;
+  --scener-gray-4: #555555;
+  --scener-gray-5: #7f7f7f;
+  --scener-gray-6: #a8a8a8;
+  --scener-gray-7: #d2d2d2;
+  --scener-gray-8: #e2e2e2;
+  --scener-gray-9: #f1f1f1;
 
   // --------------------------------------------------------------------
   // Base
   // --------------------------------------------------------------------
-  --black: #000000;
-  --white: #ffffff;
+  --scener-black: #000000;
+  --scener-white: #ffffff;
 
   // --------------------------------------------------------------------
   // Status (alert / success / warning — UI 상태용, 카테고리와 분리)
   // --------------------------------------------------------------------
-  --green-300: #4ade80; // 진행중 등 긍정 상태
-  --red-300: #ff5c5c; // 종료/에러 등 부정 상태
-  --amber-300: #ffc53d; // 예정/대기 등 경고 상태
+  --scener-green-300: #4ade80; // 진행중 등 긍정 상태
+  --scener-red-300: #ff5c5c; // 종료/에러 등 부정 상태
+  --scener-amber-300: #ffc53d; // 예정/대기 등 경고 상태
 
   // --------------------------------------------------------------------
   // Typography
   // --------------------------------------------------------------------
-  --font-sans:
+  --scener-font-sans:
     'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-logo: 'Space Grotesk', 'Pretendard', sans-serif;
+  --scener-font-logo: 'Space Grotesk', 'Pretendard', sans-serif;
 
   // Typography — Font Size (raw px values)
-  --font-size-11: 11px;
-  --font-size-13: 13px;
-  --font-size-14: 14px;
-  --font-size-15: 15px;
-  --font-size-18: 18px;
-  --font-size-22: 22px;
-  --font-size-26: 26px;
-  --font-size-34: 34px;
+  --scener-font-size-11: 11px;
+  --scener-font-size-13: 13px;
+  --scener-font-size-14: 14px;
+  --scener-font-size-15: 15px;
+  --scener-font-size-18: 18px;
+  --scener-font-size-22: 22px;
+  --scener-font-size-26: 26px;
+  --scener-font-size-34: 34px;
 
   // --------------------------------------------------------------------
   // Radius
   // --------------------------------------------------------------------
-  --radius-6: 6px;
-  --radius-10: 10px;
-  --radius-14: 14px;
-  --radius-20: 20px;
-  --radius-999: 999px;
+  --scener-radius-6: 6px;
+  --scener-radius-10: 10px;
+  --scener-radius-14: 14px;
+  --scener-radius-20: 20px;
+  --scener-radius-999: 999px;
 
   // --------------------------------------------------------------------
   // Spacing (4px base scale)
   // --------------------------------------------------------------------
-  --space-4: 4px;
-  --space-8: 8px;
-  --space-12: 12px;
-  --space-16: 16px;
-  --space-20: 20px;
-  --space-24: 24px;
-  --space-32: 32px;
-  --space-40: 40px;
-  --space-48: 48px;
-  --space-60: 60px;
-  --space-80: 80px;
-  --space-100: 100px;
-  --space-120: 120px;
+  --scener-space-4: 4px;
+  --scener-space-8: 8px;
+  --scener-space-12: 12px;
+  --scener-space-16: 16px;
+  --scener-space-20: 20px;
+  --scener-space-24: 24px;
+  --scener-space-32: 32px;
+  --scener-space-40: 40px;
+  --scener-space-48: 48px;
+  --scener-space-60: 60px;
+  --scener-space-80: 80px;
+  --scener-space-100: 100px;
+  --scener-space-120: 120px;
 }

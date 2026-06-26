@@ -29,7 +29,7 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
           colors: [
             {
               name: 'Brand Primary',
-              variable: '--color-brand-primary',
+              variable: '--scener-color-brand-primary',
               textColor: '#1A2E00',
             },
           ],
@@ -53,14 +53,17 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
           colors: [
             {
               name: '전시 (Exhibition)',
-              variable: '--color-category-exhibition',
+              variable: '--scener-color-category-exhibition',
             },
             {
               name: '공연 (Performance)',
-              variable: '--color-category-performance',
+              variable: '--scener-color-category-performance',
             },
-            { name: '팝업 (Pop-up)', variable: '--color-category-popup' },
-            { name: '영화 (Film)', variable: '--color-category-film' },
+            {
+              name: '팝업 (Pop-up)',
+              variable: '--scener-color-category-popup',
+            },
+            { name: '영화 (Film)', variable: '--scener-color-category-film' },
           ],
         }),
       );
@@ -82,15 +85,15 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
           colors: [
             {
               name: '진행중 (Ongoing)',
-              variable: '--color-status-ongoing',
+              variable: '--scener-color-status-ongoing',
               textColor: '#0A2E12',
             },
             {
               name: '예정 (Upcoming)',
-              variable: '--color-status-upcoming',
+              variable: '--scener-color-status-upcoming',
               textColor: '#3A2900',
             },
-            { name: '종료 (Ended)', variable: '--color-status-ended' },
+            { name: '종료 (Ended)', variable: '--scener-color-status-ended' },
           ],
         }),
       );
@@ -110,15 +113,31 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
         createColorGrid({
           columns: 9,
           colors: [
-            { name: 'Gray 1', variable: '--gray-1' },
-            { name: 'Gray 2', variable: '--gray-2' },
-            { name: 'Gray 3', variable: '--gray-3' },
-            { name: 'Gray 4', variable: '--gray-4' },
-            { name: 'Gray 5', variable: '--gray-5' },
-            { name: 'Gray 6', variable: '--gray-6', textColor: '#1C1C1C' },
-            { name: 'Gray 7', variable: '--gray-7', textColor: '#1C1C1C' },
-            { name: 'Gray 8', variable: '--gray-8', textColor: '#1C1C1C' },
-            { name: 'Gray 9', variable: '--gray-9', textColor: '#1C1C1C' },
+            { name: 'Gray 1', variable: '--scener-gray-1' },
+            { name: 'Gray 2', variable: '--scener-gray-2' },
+            { name: 'Gray 3', variable: '--scener-gray-3' },
+            { name: 'Gray 4', variable: '--scener-gray-4' },
+            { name: 'Gray 5', variable: '--scener-gray-5' },
+            {
+              name: 'Gray 6',
+              variable: '--scener-gray-6',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Gray 7',
+              variable: '--scener-gray-7',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Gray 8',
+              variable: '--scener-gray-8',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Gray 9',
+              variable: '--scener-gray-9',
+              textColor: '#1C1C1C',
+            },
           ],
         }),
       );
@@ -128,7 +147,7 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
 
 ## 사용 규칙
 
-1. 컴포넌트 SCSS에서는 primitive 변수를 직접 쓰지 않고, 항상 `var(--color-...)` semantic 변수를 사용합니다.
+1. 컴포넌트 SCSS에서는 primitive 변수를 직접 쓰지 않고, 항상 `var(--scener-color-...)` semantic 변수를 사용합니다.
 2. 카테고리 컬러는 4종 외에 새로운 색을 추가하지 않습니다. 새 장르가 생기면 디자인 시스템 논의를 먼저 거칩니다.
 3. 브랜드 컬러(라임)는 한 화면에 과도하게 반복하지 않습니다. 핵심 CTA 1곳에 집중하는 것을 권장합니다.
 
@@ -146,13 +165,33 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
         createColorGrid({
           columns: 7,
           colors: [
-            { name: 'Lime 50', variable: '--lime-50', textColor: '#1A2E00' },
-            { name: 'Lime 100', variable: '--lime-100', textColor: '#1A2E00' },
-            { name: 'Lime 200', variable: '--lime-200', textColor: '#1A2E00' },
-            { name: 'Lime 300', variable: '--lime-300', textColor: '#1A2E00' },
-            { name: 'Lime 400', variable: '--lime-400', textColor: '#1A2E00' },
-            { name: 'Lime 500', variable: '--lime-500' },
-            { name: 'Lime 600', variable: '--lime-600' },
+            {
+              name: 'Lime 50',
+              variable: '--scener-lime-50',
+              textColor: '#1A2E00',
+            },
+            {
+              name: 'Lime 100',
+              variable: '--scener-lime-100',
+              textColor: '#1A2E00',
+            },
+            {
+              name: 'Lime 200',
+              variable: '--scener-lime-200',
+              textColor: '#1A2E00',
+            },
+            {
+              name: 'Lime 300',
+              variable: '--scener-lime-300',
+              textColor: '#1A2E00',
+            },
+            {
+              name: 'Lime 400',
+              variable: '--scener-lime-400',
+              textColor: '#1A2E00',
+            },
+            { name: 'Lime 500', variable: '--scener-lime-500' },
+            { name: 'Lime 600', variable: '--scener-lime-600' },
           ],
         }),
       );
@@ -172,19 +211,19 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
           colors: [
             {
               name: 'Purple 50',
-              variable: '--purple-50',
+              variable: '--scener-purple-50',
               textColor: '#1C1C1C',
             },
             {
               name: 'Purple 100',
-              variable: '--purple-100',
+              variable: '--scener-purple-100',
               textColor: '#1C1C1C',
             },
-            { name: 'Purple 200', variable: '--purple-200' },
-            { name: 'Purple 300', variable: '--purple-300' },
-            { name: 'Purple 400', variable: '--purple-400' },
-            { name: 'Purple 500', variable: '--purple-500' },
-            { name: 'Purple 600', variable: '--purple-600' },
+            { name: 'Purple 200', variable: '--scener-purple-200' },
+            { name: 'Purple 300', variable: '--scener-purple-300' },
+            { name: 'Purple 400', variable: '--scener-purple-400' },
+            { name: 'Purple 500', variable: '--scener-purple-500' },
+            { name: 'Purple 600', variable: '--scener-purple-600' },
           ],
         }),
       );
@@ -202,13 +241,21 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
         createColorGrid({
           columns: 7,
           colors: [
-            { name: 'Pink 50', variable: '--pink-50', textColor: '#1C1C1C' },
-            { name: 'Pink 100', variable: '--pink-100', textColor: '#1C1C1C' },
-            { name: 'Pink 200', variable: '--pink-200' },
-            { name: 'Pink 300', variable: '--pink-300' },
-            { name: 'Pink 400', variable: '--pink-400' },
-            { name: 'Pink 500', variable: '--pink-500' },
-            { name: 'Pink 600', variable: '--pink-600' },
+            {
+              name: 'Pink 50',
+              variable: '--scener-pink-50',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Pink 100',
+              variable: '--scener-pink-100',
+              textColor: '#1C1C1C',
+            },
+            { name: 'Pink 200', variable: '--scener-pink-200' },
+            { name: 'Pink 300', variable: '--scener-pink-300' },
+            { name: 'Pink 400', variable: '--scener-pink-400' },
+            { name: 'Pink 500', variable: '--scener-pink-500' },
+            { name: 'Pink 600', variable: '--scener-pink-600' },
           ],
         }),
       );
@@ -228,23 +275,23 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
           colors: [
             {
               name: 'Orange 50',
-              variable: '--orange-50',
+              variable: '--scener-orange-50',
               textColor: '#1C1C1C',
             },
             {
               name: 'Orange 100',
-              variable: '--orange-100',
+              variable: '--scener-orange-100',
               textColor: '#1C1C1C',
             },
             {
               name: 'Orange 200',
-              variable: '--orange-200',
+              variable: '--scener-orange-200',
               textColor: '#1C1C1C',
             },
-            { name: 'Orange 300', variable: '--orange-300' },
-            { name: 'Orange 400', variable: '--orange-400' },
-            { name: 'Orange 500', variable: '--orange-500' },
-            { name: 'Orange 600', variable: '--orange-600' },
+            { name: 'Orange 300', variable: '--scener-orange-300' },
+            { name: 'Orange 400', variable: '--scener-orange-400' },
+            { name: 'Orange 500', variable: '--scener-orange-500' },
+            { name: 'Orange 600', variable: '--scener-orange-600' },
           ],
         }),
       );
@@ -262,13 +309,25 @@ SCENE;er의 컬러 시스템은 **Primitive → Semantic** 2단계 토큰 구조
         createColorGrid({
           columns: 7,
           colors: [
-            { name: 'Blue 50', variable: '--blue-50', textColor: '#1C1C1C' },
-            { name: 'Blue 100', variable: '--blue-100', textColor: '#1C1C1C' },
-            { name: 'Blue 200', variable: '--blue-200', textColor: '#1C1C1C' },
-            { name: 'Blue 300', variable: '--blue-300' },
-            { name: 'Blue 400', variable: '--blue-400' },
-            { name: 'Blue 500', variable: '--blue-500' },
-            { name: 'Blue 600', variable: '--blue-600' },
+            {
+              name: 'Blue 50',
+              variable: '--scener-blue-50',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Blue 100',
+              variable: '--scener-blue-100',
+              textColor: '#1C1C1C',
+            },
+            {
+              name: 'Blue 200',
+              variable: '--scener-blue-200',
+              textColor: '#1C1C1C',
+            },
+            { name: 'Blue 300', variable: '--scener-blue-300' },
+            { name: 'Blue 400', variable: '--scener-blue-400' },
+            { name: 'Blue 500', variable: '--scener-blue-500' },
+            { name: 'Blue 600', variable: '--scener-blue-600' },
           ],
         }),
       );

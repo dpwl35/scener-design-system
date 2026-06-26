@@ -3,11 +3,11 @@ interface TypeSampleProps {
   label: string;
   /** 실제로 그 스타일이 적용되어 보여질 샘플 텍스트 */
   sampleText: string;
-  /** font-size 값 (CSS 변수 문자열). 예: "var(--text-display-size)" */
+  /** font-size 값 (CSS 변수 문자열). 예: "var(--scener-text-display-size)" */
   fontSize: string;
-  /** font-weight 값 (CSS 변수 문자열). 예: "var(--text-display-weight)" */
+  /** font-weight 값 (CSS 변수 문자열). 예: "var(--scener-text-display-weight)" */
   fontWeight: string;
-  /** line-height 값 (CSS 변수 문자열). 예: "var(--text-display-line-height)" */
+  /** line-height 값 (CSS 변수 문자열). 예: "var(--scener-text-display-line-height)" */
   lineHeight?: string;
   /** 샘플 텍스트의 색상. 기본은 기본 텍스트 색상, Overline 등에는 다른 색을 줄 수 있음 */
   color?: string;
@@ -30,7 +30,7 @@ export const createTypeSample = ({
   fontSize,
   fontWeight,
   lineHeight = '1.4',
-  color = 'var(--color-text-primary)',
+  color = 'var(--scener-color-text-primary)',
   textTransform,
   letterSpacing,
   isLast = false,
@@ -42,14 +42,14 @@ export const createTypeSample = ({
   row.style.padding = '16px 0';
   row.style.borderBottom = isLast
     ? 'none'
-    : '1px solid var(--color-border-default)';
-  row.style.fontFamily = 'var(--font-family-base)';
+    : '1px solid var(--scener-color-border-default)';
+  row.style.fontFamily = 'var(--scener-font-family-base)';
 
   const labelDiv = document.createElement('div');
   labelDiv.style.width = '140px';
   labelDiv.style.flexShrink = '0';
-  labelDiv.style.fontSize = 'var(--text-body-4-size)';
-  labelDiv.style.color = 'var(--color-text-tertiary)';
+  labelDiv.style.fontSize = 'var(--scener-text-body-4-size)';
+  labelDiv.style.color = 'var(--scener-color-text-tertiary)';
   labelDiv.innerText = label;
 
   const sampleDiv = document.createElement('div');
@@ -78,7 +78,7 @@ export const createTypeSampleGroup = ({
   items,
 }: TypeSampleGroupProps): HTMLElement => {
   const group = document.createElement('div');
-  group.style.borderTop = '1px solid var(--color-border-default)';
+  group.style.borderTop = '1px solid var(--scener-color-border-default)';
   group.style.margin = '16px 0 32px';
 
   items.forEach((item) => {

@@ -18,13 +18,13 @@ export const createColor = ({
 
   // 부모 컨테이너 스타일 적용
   container.style.background = `var(${variable})`;
-  container.style.borderRadius = 'var(--radius-medium)';
+  container.style.borderRadius = 'var(--scener-radius-medium)';
   container.style.padding = '16px';
   container.style.display = 'flex';
   container.style.flexDirection = 'column';
   container.style.justifyContent = 'space-between';
   container.style.minHeight = '100px';
-  container.style.fontFamily = 'var(--font-family-base)';
+  container.style.fontFamily = 'var(--scener-font-family-base)';
 
   // 컬러 이름 (상단 텍스트)
   const nameDiv = document.createElement('div');

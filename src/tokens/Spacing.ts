@@ -16,26 +16,26 @@ export const createSpacing = ({
   row.style.alignItems = 'center';
   row.style.gap = '16px';
   row.style.padding = '10px 0';
-  row.style.borderBottom = '1px solid var(--color-border-default)';
-  row.style.fontFamily = 'var(--font-family-base)';
+  row.style.borderBottom = '1px solid var(--scener-color-border-default)';
+  row.style.fontFamily = 'var(--scener-font-family-base)';
 
   const variableDiv = document.createElement('div');
   variableDiv.style.width = '160px';
   variableDiv.style.flexShrink = '0';
   variableDiv.style.fontSize = '12px';
-  variableDiv.style.color = 'var(--color-text-secondary)';
+  variableDiv.style.color = 'var(--scener-color-text-secondary)';
   variableDiv.innerText = variable;
 
   const bar = document.createElement('div');
   bar.style.height = '16px';
   bar.style.width = `var(${variable})`;
-  bar.style.background = 'var(--color-brand-primary)';
+  bar.style.background = 'var(--scener-color-brand-primary)';
   bar.style.borderRadius = '3px';
   bar.style.flexShrink = '0';
 
   const pxValueDiv = document.createElement('div');
   pxValueDiv.style.fontSize = '12px';
-  pxValueDiv.style.color = 'var(--color-text-tertiary)';
+  pxValueDiv.style.color = 'var(--scener-color-text-tertiary)';
   pxValueDiv.innerText = pxValue;
 
   row.appendChild(variableDiv);

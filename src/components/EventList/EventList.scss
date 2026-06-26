@@ -6,9 +6,9 @@
 }
 
 .scener-event-list_item {
-  @include flex-center(var(--spacing-4xsmall));
-  padding: var(--spacing-4xsmall) 0;
-  border-bottom: 1px solid var(--color-border-default);
+  @include flex-center(var(--scener-spacing-4xsmall));
+  padding: var(--scener-spacing-4xsmall) 0;
+  border-bottom: 1px solid var(--scener-color-border-default);
 
   &:last-child {
     border-bottom: none;
@@ -18,8 +18,8 @@
 .scener-event-list_thumbnail {
   width: 56px;
   height: 56px;
-  border-radius: var(--radius-medium);
-  background-color: var(--color-background-inset);
+  border-radius: var(--scener-radius-medium);
+  background-color: var(--scener-color-background-inset);
   flex-shrink: 0;
   overflow: hidden;
 
@@ -37,28 +37,28 @@
 
 .scener-event-list_title {
   @include truncate(1);
-  font-size: var(--text-body-1-size);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  margin: var(--spacing-6xsmall) 0 var(--spacing-6xsmall);
+  font-size: var(--scener-text-body-1-size);
+  font-weight: var(--scener-font-weight-bold);
+  color: var(--scener-color-text-primary);
+  margin: var(--scener-spacing-6xsmall) 0 var(--scener-spacing-6xsmall);
 }
 
 .scener-event-list_meta {
-  font-size: var(--text-body-3-size);
-  color: var(--color-text-secondary);
+  font-size: var(--scener-text-body-3-size);
+  color: var(--scener-color-text-secondary);
 }
 
 .scener-event-list_dday {
   flex-shrink: 0;
-  font-size: var(--text-body-3-size);
-  font-weight: var(--font-weight-bold);
-  padding: var(--spacing-5xsmall) var(--spacing-4xsmall);
-  border-radius: var(--radius-medium);
-  background-color: var(--color-background-elevated);
-  color: var(--color-text-secondary);
+  font-size: var(--scener-text-body-3-size);
+  font-weight: var(--scener-font-weight-bold);
+  padding: var(--scener-spacing-5xsmall) var(--scener-spacing-4xsmall);
+  border-radius: var(--scener-radius-medium);
+  background-color: var(--scener-color-background-elevated);
+  color: var(--scener-color-text-secondary);
 
   &[data-urgent='true'] {
-    background-color: var(--color-brand-primary);
-    color: var(--color-brand-on-primary);
+    background-color: var(--scener-color-brand-primary);
+    color: var(--scener-color-brand-on-primary);
   }
 }
