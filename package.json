@@ -38,6 +38,7 @@
     "@chromatic-com/storybook": "^5.2.1",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
+    "@storybook/addon-themes": "^10.4.6",
     "@storybook/addon-vitest": "^10.4.6",
     "@storybook/web-components-vite": "^10.4.6",
     "@types/node": "^26.0.1",

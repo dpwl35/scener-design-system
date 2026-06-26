@@ -7,6 +7,9 @@
     font-size: 16px;
   }
 }
-.sbdocs-wrapper.css-3rewwu {
-  border: 1px solid red;
+
+html[data-theme='dark'] {
+  .docs-story {
+    background-color: #1c1c1c;
+  }
 }

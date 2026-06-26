@@ -1,8 +1,20 @@
 import type { Preview } from '@storybook/web-components-vite';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import '../src/styles/global.scss';
 import '../src/styles/storybook.scss';
 
 const preview: Preview = {
+  decorators: [
+    withThemeByDataAttribute({
+      themes: {
+        dark: 'dark',
+        light: 'light',
+      },
+      defaultTheme: 'dark',
+      attributeName: 'data-theme',
+    }),
+  ],
+
   parameters: {
     controls: {
       matchers: {
@@ -12,9 +24,6 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: 'todo',
     },
   },
