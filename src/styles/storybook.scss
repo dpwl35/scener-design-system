@@ -13,3 +13,16 @@ html[data-theme='dark'] {
     background-color: #1c1c1c;
   }
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--scener-color-text-primary);
+  font-family: var(--scener-font-family-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
